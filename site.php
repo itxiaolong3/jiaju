@@ -544,59 +544,38 @@ class jiajuModuleSite extends WeModuleSite
             ':uniacid' => $_W['uniacid'],
         );
         $result_list = pdo_fetchall($sql, $params);
-
         $sql2 = "select count(*) from " . tablename($table) . " where `uniacid`=:uniacid";
         $total = pdo_fetchcolumn($sql2, $params);
         $pager = pagination($total, $pindex, $psize);
-        include $this->template("list");
+        include $this->template("stores");
 
     }
-
     public function doWebAddseller()
     {
         global $_W, $_GPC;
         $tablename = "jiaju_stores";
-        $table2 = "jiaju_allowrange";
-        $sql2 = "select * from " . tablename($table2) . " where `uniacid`=:uniacid  order by fid asc  ";
         $params = array(
             ':uniacid' => $_W['uniacid']
         );
-        $rangelist = pdo_fetchall($sql2, $params);
         if (!$_W['ispost']) {
-            include $this->template('addseller');
+            include $this->template('addstores');
         } else {
-
             $arr = array();
             $arr['uniacid'] = $_W['uniacid'];
             if (empty($_GPC['s_name'])) {
-                message('请填单位名称', referer(), 'error');
+                message('请填商家名称', referer(), 'error');
             } else {
                 $arr['s_name'] = $_GPC['s_name'];
             }
             if (empty($_GPC['s_desc'])) {
-                message('请填单位简称', referer(), 'error');
+                message('请填商家简称', referer(), 'error');
             } else {
                 $arr['s_desc'] = $_GPC['s_desc'];
-            }
-            if (empty($_GPC['fname'])) {
-                message('经营范围不能为空', referer(), 'error');
-            } else {
-                $arr['allrange'] = $_GPC['fname'];
             }
             if (empty($_GPC['s_address'])) {
                 message('请填写地址', referer(), 'error');
             } else {
                 $arr['s_address'] = $_GPC['s_address'];
-            }
-            if (empty($_GPC['s_compername'])) {
-                message('所在单位不可为空', referer(), 'error');
-            } else {
-                $arr['s_compername'] = $_GPC['s_compername'];
-            }
-            if (empty($_GPC['s_headname'])) {
-                message('负责人不能为空', referer(), 'error');
-            } else {
-                $arr['s_headname'] = $_GPC['s_headname'];
             }
             if (empty($_GPC['s_headphone'])) {
                 message('负责人电话不能为空', referer(), 'error');
@@ -608,54 +587,22 @@ class jiajuModuleSite extends WeModuleSite
             } else {
                 $arr['s_img'] = $_GPC['s_img'];
             }
-            if (empty($_GPC['yingyeimg'])) {
-                message('营业执照不可为空', referer(), 'error');
-            } else {
-                $arr['yingyeimg'] = $_GPC['yingyeimg'];
-            }
-            if (empty($_GPC['travelallowimg'])) {
-                message('请添加旅游照片', referer(), 'error');
-            } else {
-                $arr['travelallowimg'] = $_GPC['travelallowimg'];
-            }
+
             if (empty($_GPC['mengimg'])) {
-                message('请添加门店照片', referer(), 'error');
+                message('请添加商家封面', referer(), 'error');
             } else {
                 $arr['mengimg'] = $_GPC['mengimg'];
             }
-            if (empty($_GPC['latitude'])) {
-                message('位置信息不能为空', referer(), 'error');
-            } else {
-                $arr['latitude'] = $_GPC['latitude'];
-            }
-            if (empty($_GPC['longitude'])) {
-                message('位置信息不能为空', referer(), 'error');
-            } else {
-                $arr['longitude'] = $_GPC['longitude'];
-            }
-            if (empty($_GPC['starttime'])) {
-                message('经营时间不能为空', referer(), 'error');
-            } else {
-                $arr['starttime'] = $_GPC['starttime'];
-            }
-            if (empty($_GPC['endtime'])) {
-                message('经营时间不能为空', referer(), 'error');
-            } else {
-                $arr['endtime'] = $_GPC['endtime'];
-            }
-
+            $arr['otherimg'] =implode(',',$_GPC['otherimg']);
             $arr['addtime'] = time();
-            $arr['grade'] = $_GPC['grade'];
-            $add_result = pdo_insert('jiaju_stores', $arr);
+            $add_result = pdo_insert($tablename, $arr);
             if (!empty($add_result)) {
-                message('添加成功', $this->createWebUrl('list', array('type' => $arr['type'])), 'success');
+                message('添加成功', $this->createWebUrl('List', array('type' => $arr['type'])), 'success');
             } else {
                 message('添加失败', referer(), 'error');
             }
         }
     }
-
-
     public function doWebEditseller()
     {
         global $_W, $_GPC;
@@ -670,48 +617,27 @@ class jiajuModuleSite extends WeModuleSite
                 ':id' => $id
             );
             $result = pdo_fetch($sql, $params);
+            $result['otherimg']=explode(',',$result['otherimg']);
             if (empty($result)) {
                 message("信息不存在", referer(), 'error');
             } else {
-                $table2 = "jiaju_allowrange";
-                $sql2 = "select * from " . tablename($table2) . " where `uniacid`=:uniacid  order by fid asc  ";
-                $params = array(
-                    ':uniacid' => $_W['uniacid']
-                );
-                $rangelist = pdo_fetchall($sql2, $params);
                 if ($_W['ispost']) {
-
                     $arr = array();
                     $arr['uniacid'] = $_W['uniacid'];
                     if (empty($_GPC['s_name'])) {
-                        message('请填单位名称', referer(), 'error');
+                        message('请填商家名称', referer(), 'error');
                     } else {
                         $arr['s_name'] = $_GPC['s_name'];
                     }
                     if (empty($_GPC['s_desc'])) {
-                        message('请填单位简称', referer(), 'error');
+                        message('请填商家简称', referer(), 'error');
                     } else {
                         $arr['s_desc'] = $_GPC['s_desc'];
-                    }
-                    if (empty($_GPC['fname'])) {
-                        message('经营范围不能为空', referer(), 'error');
-                    } else {
-                        $arr['allrange'] = $_GPC['fname'];
                     }
                     if (empty($_GPC['s_address'])) {
                         message('请填写地址', referer(), 'error');
                     } else {
                         $arr['s_address'] = $_GPC['s_address'];
-                    }
-                    if (empty($_GPC['s_compername'])) {
-                        message('所在单位不可为空', referer(), 'error');
-                    } else {
-                        $arr['s_compername'] = $_GPC['s_compername'];
-                    }
-                    if (empty($_GPC['s_headname'])) {
-                        message('负责人不能为空', referer(), 'error');
-                    } else {
-                        $arr['s_headname'] = $_GPC['s_headname'];
                     }
                     if (empty($_GPC['s_headphone'])) {
                         message('负责人电话不能为空', referer(), 'error');
@@ -723,59 +649,28 @@ class jiajuModuleSite extends WeModuleSite
                     } else {
                         $arr['s_img'] = $_GPC['s_img'];
                     }
-                    if (empty($_GPC['yingyeimg'])) {
-                        message('营业执照不可为空', referer(), 'error');
-                    } else {
-                        $arr['yingyeimg'] = $_GPC['yingyeimg'];
-                    }
-                    if (empty($_GPC['travelallowimg'])) {
-                        message('请添加旅游照片', referer(), 'error');
-                    } else {
-                        $arr['travelallowimg'] = $_GPC['travelallowimg'];
-                    }
+
                     if (empty($_GPC['mengimg'])) {
-                        message('请添加门店照片', referer(), 'error');
+                        message('请添加商家封面', referer(), 'error');
                     } else {
                         $arr['mengimg'] = $_GPC['mengimg'];
                     }
-                    if (empty($_GPC['latitude'])) {
-                        message('位置信息不能为空', referer(), 'error');
-                    } else {
-                        $arr['latitude'] = $_GPC['latitude'];
-                    }
-                    if (empty($_GPC['longitude'])) {
-                        message('位置信息不能为空', referer(), 'error');
-                    } else {
-                        $arr['longitude'] = $_GPC['longitude'];
-                    }
-                    if (empty($_GPC['starttime'])) {
-                        message('经营时间不能为空', referer(), 'error');
-                    } else {
-                        $arr['starttime'] = $_GPC['starttime'];
-                    }
-                    if (empty($_GPC['endtime'])) {
-                        message('经营时间不能为空', referer(), 'error');
-                    } else {
-                        $arr['endtime'] = $_GPC['endtime'];
-                    }
                     //$arr['addtime']=time();
-                    $arr['grade'] = $_GPC['grade'];
+                    $arr['otherimg'] =implode(',',$_GPC['otherimg']);
                     $edit_result = pdo_update('jiaju_stores', $arr, array('uniacid' => $_W['uniacid'], 'id' => $id));
                     if (!empty($edit_result)) {
-                        message('编辑成功', $this->createWebUrl('list'), 'success');
+                        message('编辑成功', $this->createWebUrl('List'), 'success');
                     } else {
                         message('编辑失败', referer(), 'error');
                     }
                 } else {
-
-                    include $this->template('editseller');
+                    include $this->template('editstores');
                 }
 
             }
 
         }
     }
-
     public function doWebDelseller()
     {
         global $_W, $_GPC;
@@ -795,7 +690,7 @@ class jiajuModuleSite extends WeModuleSite
             } else {
                 $del_result = pdo_delete($table, array('uniacid' => $_W['uniacid'], 'id' => $id));
                 if ($del_result) {
-                    message('删除成功', $this->createWebUrl('list', array('type' => $result['type'])), 'success');
+                    message('删除成功', $this->createWebUrl('List', array('type' => $result['type'])), 'success');
                 } else {
                     message("删除失败", referer(), 'error');
                 }

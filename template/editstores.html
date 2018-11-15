@@ -1,0 +1,111 @@
+{template 'common/header-zunyang'}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">编辑商家</h3>
+    </div>
+    <div class="panel-body">
+        <form action="" method="post" class="form-horizontal" role="form" id="form1" >
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">商家名称</div>
+                        <input type="text" class="form-control" name="s_name" value="{$result['s_name']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">商家简介</div>
+                        <input type="text" class="form-control" name="s_desc" value="{$result['s_desc']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">地址</div>
+                        <input type="text" class="form-control" name="s_address" value="{$result['s_address']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">联系电话</div>
+                        <input type="text" class="form-control" name="s_headphone" value="{$result['s_headphone']}"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">门店logo</div>
+                        {php echo tpl_form_field_image('s_img',$result['s_img']);}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">门店封面</div>
+                        {php echo tpl_form_field_image('mengimg',$result['mengimg']);}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">商家展示图片</div>
+                        {php echo tpl_form_field_multi_image('otherimg',$result['otherimg']);}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label"></label>
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <input type="submit" class="btn btn-danger" value="提交">
+                    <input type="hidden" name="token" value="{$_W['token']}">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $(function(){
+        $('#form1').submit(function(){
+
+            if (!$.trim($(':text[name="s_name"]').val())) {
+                util.message('请填商家名称', '', 'error');
+                return false;
+            }
+            if (!$.trim($(':text[name="s_address"]').val())) {
+                util.message('请填写地址', '', 'error');
+                return false;
+            }
+
+            if (!$.trim($(':text[name="s_headphone"]').val())) {
+                util.message('手机号不可为空', '', 'error');
+                return false;
+            }
+            if (!$.trim($(':text[name="s_img"]').val())) {
+                util.message('请添加上logo', '', 'error');
+                return false;
+            }
+
+            if (!$.trim($(':text[name="mengimg"]').val())) {
+                util.message('请添加门店照片', '', 'error');
+                return false;
+            }
+
+            return true;
+        });
+
+        $('body').on("click",'.remove',function(e){
+            $(this).parent('div').parent('div').remove();
+        })
+    });
+</script>
+{template 'common/footer'}

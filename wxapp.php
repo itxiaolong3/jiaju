@@ -241,13 +241,20 @@ class jiajuModuleWxapp extends WeModuleWxapp
         $sid=$_GPC['sid'];
         $info=pdo_get('jiaju_sertype',array('uniacid'=>$_W['uniacid'],'sid'=>$sid));
         $info['img']=tomedia($info['img']);
+
         $grageandprice=array(
             array("grage"=>$info['onegrage'],"price"=>$info['oneprice']),
             array("grage"=>$info['twograge'],"price"=>$info['twoprice']),
             array("grage"=>$info['threegrage'],"price"=>$info['threeprice']),
         );
+        $dealarr=array();
+        foreach ($grageandprice as $k=>$v){
+            if ($v['grage']&&$v['price']){
+                array_push($dealarr,$v);
+            }
+        }
         $data['allinfo']=$info;
-        $data['grage']=$grageandprice;
+        $data['grage']=$dealarr;
         echo json_encode($data);
     }
     //微信登录
@@ -565,6 +572,43 @@ class jiajuModuleWxapp extends WeModuleWxapp
         $data = curl_exec($ch);
         curl_close($ch);
         pdo_delete('jiaju_formid',array('id'=>$form['id']));
+    }
+    //获取个人订单
+    public function doPageUserOrder(){
+        global $_W, $_GPC;
+        $page=max(1, intval($_GPC['page']));
+        $pagesize=8;
+        $openid=$_GPC['openid'];
+        $type=$_GPC['active'];//0全部 1待受理 2服务中 3待评价 4已完成
+        if(empty($type)){
+            $result=pdo_getall('jiaju_order',array('uniacid'=>$_W['uniacid'],'openid'=>$openid), array() , '' , 'addtime DESC' );
+        }else{
+            $sql="select * from " . tablename("jiaju_order") . " where `uniacid`=:uniacid and `openid`=:openid and `state`=:state order by addtime desc";
+            $params = array(
+                ':uniacid' => $_W['uniacid'],
+                ':openid' => $openid,
+                ':state'=>$type
+            );
+            $select_sql =$sql." LIMIT " .($page - 1) * $pagesize.",".$pagesize;
+            $result = pdo_fetchall($select_sql, $params);
+        }
+        foreach ($result as $k=>$v){
+            $result[$k]['imgs']=explode(',',$v['imgs']);
+        }
+        $resdata['Data']=$result;
+        echo json_encode($resdata);
+
+    }
+    //获取三种订单数量
+    public function doPageGetordercount(){
+        global $_W, $_GPC;
+        $data['Data']['wait']=pdo_fetchcolumn("SELECT COUNT(*) FROM ".tablename('jiaju_order')
+            .' where openid=:openid and uniacid=:uniacid and state=1',array('openid'=>$_GPC['openid'],'uniacid'=>$_W['uniacid']));
+        $data['Data']['sering']=pdo_fetchcolumn("SELECT COUNT(*) FROM ".tablename('jiaju_order').
+            ' where openid=:openid and uniacid=:uniacid and state=2',array('openid'=>$_GPC['openid'],'uniacid'=>$_W['uniacid']));
+        $data['Data']['pingjia']=pdo_fetchcolumn("SELECT COUNT(*) FROM ".tablename('jiaju_order')
+            .' where openid=:openid and uniacid=:uniacid and state=3',array('openid'=>$_GPC['openid'],'uniacid'=>$_W['uniacid']));
+        echo json_encode($data);
     }
     /////////////////////////////////////////////////////////////
     //我的接口结束

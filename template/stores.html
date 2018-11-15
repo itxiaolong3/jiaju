@@ -1,0 +1,52 @@
+{template 'common/header-zunyang'}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {$type_name}列表
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th style="width:60px; text-align:center;">编号</th>
+                <th style="width:100px; text-align:center;">logo</th>
+                <th style="width:100px; text-align:center;">商家封面</th>
+                <th>商家名称</th>
+                <th>商家简介</th>
+                <th>负责人电话</th>
+                <th>添加时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {if empty($result_list)}
+            <tr>
+                <td colspan="7" style="text-align: center;">暂无此类商家</td>
+            </tr>
+            {else}
+            {loop $result_list $v}
+            <tr>
+                <td style="height:80px; line-height:80px; text-align:center;">{$v['id']}</td>
+                <td><img style="width:80px; height:80px;" src="{php echo tomedia($v['s_img'])}" /></td>
+                <td><img style="width:80px; height:80px;" src="{php echo tomedia($v['mengimg'])}" /></td>
+                <td style="line-height: 80px;">{$v['s_name']}</td>
+                <td style="line-height: 80px;">{$v['s_desc']}</td>
+                <td style="line-height: 80px;">{$v['s_headphone']}</td>
+                <td style="line-height: 80px;">{php echo date('Y-m-d H:m:s',$v['addtime'])}</td>
+                <td style="line-height: 80px;">
+                    <a href="{php echo $this->createWebUrl('editseller',array('m'=>'jiajustores','id'=>$v['id']))}">编辑</a>&nbsp;&nbsp;
+                    <a onclick="return confirm('此操作不可恢复，确定删除吗？'); return false;" href="{php echo $this->createWebUrl('delseller',array('m'=>'jiajustores','id'=>$v['id']))}">删除</a>
+                </td>
+            </tr>
+            {/loop}
+            {/if}
+            </tbody>
+        </table>
+    </div>
+    <div class="text-right">
+        {$pager}
+    </div>
+</div>
+</div>
+
+{template 'common/footer'}
