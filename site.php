@@ -247,11 +247,16 @@ class jiajuModuleSite extends WeModuleSite
             } else {
                 $arr['name'] = $_GPC['name'];
             }
+            if (empty($_GPC['onegrage'])||empty($_GPC['oneprice'])) {
+                message('等级类型不能为空，请填：默认', referer(), 'error');
+            } else {
+                $arr['onegrage'] = $_GPC['onegrage'];
+            }
             $arr['addtime'] = time();
             $arr['desc'] = $_GPC['desc'];
             $arr['pid'] = $_GPC['pid'];
-          
-            $arr['onegrage'] = $_GPC['onegrage'];
+
+
             $arr['twograge'] = $_GPC['twograge'];
             $arr['threegrage'] = $_GPC['threegrage'];
 
@@ -595,6 +600,7 @@ class jiajuModuleSite extends WeModuleSite
             }
             $arr['otherimg'] =implode(',',$_GPC['otherimg']);
             $arr['addtime'] = time();
+            $arr['detaildesc'] = $_GPC['detaildesc'];
             $add_result = pdo_insert($tablename, $arr);
             if (!empty($add_result)) {
                 message('添加成功', $this->createWebUrl('List', array('type' => $arr['type'])), 'success');
@@ -624,6 +630,7 @@ class jiajuModuleSite extends WeModuleSite
                 if ($_W['ispost']) {
                     $arr = array();
                     $arr['uniacid'] = $_W['uniacid'];
+                    $arr['detaildesc'] = $_GPC['detaildesc'];
                     if (empty($_GPC['s_name'])) {
                         message('请填商家名称', referer(), 'error');
                     } else {
@@ -697,6 +704,26 @@ class jiajuModuleSite extends WeModuleSite
             }
 
         }
+    }
+    //用户列表
+    public function doWebUserlist()
+    {
+        global $_W, $_GPC;
+        $table = "jiaju_user";
+        $pindex = max(1, intval($_GPC['page']));
+        $psize = 10;
+        $getkeyword=$_GPC['keywords'];
+        $where=" nickname LIKE '%".$getkeyword."%'";
+        $sql = "select * from " . tablename($table) ." where uniacid=:uniacid and ".$where." order by addtime desc limit " . ($pindex - 1) * $psize . ',' . $psize;
+        $params = array(
+            ':uniacid' => $_W['uniacid'],
+        );
+        $result_list = pdo_fetchall($sql, $params);
+        $sql2 = "select count(*) from " . tablename($table) . " where `uniacid`=:uniacid";
+        $total = pdo_fetchcolumn($sql2, $params);
+        $pager = pagination($total, $pindex, $psize);
+        include $this->template("userlist");
+
     }
     /*经营范围列表*/
     public function doWebRange()
@@ -953,19 +980,30 @@ class jiajuModuleSite extends WeModuleSite
 //        $frames['fenlei']['items']['addrange']['active'] = '';
 
         /////////////////////////////
-        $frames['pro']['title'] = '问题管理';
-        $frames['pro']['active'] = '';
-        $frames['pro']['items'] = array();
+//        $frames['pro']['title'] = '问题管理';
+//        $frames['pro']['active'] = '';
+//        $frames['pro']['items'] = array();
+//
+//        $frames['pro']['items']['pro']['url'] = url('site/entry/problist', array('m' => $name));
+//        $frames['pro']['items']['pro']['title'] = '问题列表';
+//        $frames['pro']['items']['pro']['actions'] = array();
+//        $frames['pro']['items']['pro']['active'] = '';
+//
+//        $frames['pro']['items']['addp']['url'] = url('site/entry/addprob', array('m' => $name));
+//        $frames['pro']['items']['addp']['title'] = '新增问题';
+//        $frames['pro']['items']['addp']['actions'] = array();
+//        $frames['pro']['items']['addp']['active'] = '';
 
-        $frames['pro']['items']['pro']['url'] = url('site/entry/problist', array('m' => $name));
-        $frames['pro']['items']['pro']['title'] = '问题列表';
-        $frames['pro']['items']['pro']['actions'] = array();
-        $frames['pro']['items']['pro']['active'] = '';
+        /////////////////////////////
+        $frames['user']['title'] = '用户管理';
+        $frames['user']['active'] = '';
+        $frames['user']['items'] = array();
 
-        $frames['pro']['items']['addp']['url'] = url('site/entry/addprob', array('m' => $name));
-        $frames['pro']['items']['addp']['title'] = '新增问题';
-        $frames['pro']['items']['addp']['actions'] = array();
-        $frames['pro']['items']['addp']['active'] = '';
+        $frames['user']['items']['userlist']['url'] = url('site/entry/userlist', array('m' => $name));
+        $frames['user']['items']['userlist']['title'] = '用户列表';
+        $frames['user']['items']['userlist']['actions'] = array();
+        $frames['user']['items']['userlist']['active'] = '';
+        /////////////////////////////
         /////////////////////////////
 
         return $frames;

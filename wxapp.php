@@ -309,7 +309,6 @@ class jiajuModuleWxapp extends WeModuleWxapp
 
     }
     //获取用户信息
-
     public function doPageGetuserinfo(){
         global $_W, $_GPC;
         $openid=$_GPC['openid'];
@@ -608,6 +607,14 @@ class jiajuModuleWxapp extends WeModuleWxapp
             ' where openid=:openid and uniacid=:uniacid and state=2',array('openid'=>$_GPC['openid'],'uniacid'=>$_W['uniacid']));
         $data['Data']['pingjia']=pdo_fetchcolumn("SELECT COUNT(*) FROM ".tablename('jiaju_order')
             .' where openid=:openid and uniacid=:uniacid and state=3',array('openid'=>$_GPC['openid'],'uniacid'=>$_W['uniacid']));
+        echo json_encode($data);
+    }
+    //获取订单详细
+    public function doPagegetOrderDetail(){
+        global $_W, $_GPC;
+        $detailinfo=pdo_get('jiaju_order',array('id'=>$_GPC['id']));
+        $detailinfo['imgs']=explode(',',$detailinfo['imgs']);
+        $data['Data']=$detailinfo;
         echo json_encode($data);
     }
     /////////////////////////////////////////////////////////////
