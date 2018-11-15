@@ -1,0 +1,168 @@
+{template 'common/header-zunyang'}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">编辑商家</h3>
+    </div>
+    <div class="panel-body">
+        <form action="" method="post" class="form-horizontal" role="form" id="form1" >
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">商家名称</div>
+                        <input type="text" class="form-control" name="name" value="{$result['name']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">商家地址</div>
+                        <input type="text" class="form-control" name="address" value="{$result['address']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">商家电话</div>
+                        <input type="text" class="form-control" name="tel" value="{$result['tel']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">服务类型</div>
+
+                        <select name="type" class="form-control">
+                            <option value="0" {if $result['type']==0}selected="selected"{/if}>油漆修补</option>
+                            <option value="1" {if $result['type']==1}selected="selected"{/if}>洗车美容</option>
+                            <option value="2" {if $result['type']==2}selected="selected"{/if}>维修保养</option>
+                            <option value="3" {if $result['type']==3}selected="selected"{/if}>汽车配件</option>
+                            <option value="4" {if $result['type']==4}selected="selected"{/if}>保险电话</option>
+                            <option value="5" {if $result['type']==5}selected="selected"{/if}>道路救援</option>
+                            <option value="6" {if $result['type']==6}selected="selected"{/if}>汽车精品</option>
+                            <option value="7" {if $result['type']==7}selected="selected"{/if}>年审代办</option>
+                            <option value="8" {if $result['type']==8}selected="selected"{/if}>0首付购车</option>
+                            <option value="9" {if $result['type']==9}selected="selected"{/if}>轮胎充气更换</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">商家logo</div>
+                        {php echo tpl_form_field_image('logo',$result['logo']);}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">商家图集</div>
+                        {php echo tpl_form_field_multi_image('thumbs',$thumbs);}
+                    </div>
+                </div>
+            </div>
+            <div class="form-inline" style="margin-bottom: 30px;">
+
+                <div class="input-group">
+                    <div class="input-group-addon">商家经度</div>
+                    <input type="text" class="form-control" name="longitude" value="{$result['longitude']}"/>
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">商家纬度</div>
+                    <input type="text" class="form-control" name="latitude" value="{$result['latitude']}"/>
+                </div>
+                <div class="input-group"><p><a target="_blank" href="http://api.map.baidu.com/lbsapi/getpoint/index.html">坐标拾取系统</a> </p></div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon" >服务内容(<a href="javascript:void(0);" id="add" style="color: #00a0e9">添加一项</a> )</div>
+                        <div id="InputsWrapper">
+                            {loop $fwnr $index $m}
+                            <div class="form-inline" style="margin-bottom: 30px;">
+                                <div class="input-group">
+                                    <div class="input-group-addon">服务名称</div>
+                                    <input type="text" class="form-control" name="fwname[]" value="{$m['fwmc']}"/>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-addon">服务价格</div>
+                                    <input type="text" class="form-control" name="fwprice[]" value="{$m['fwprice']}"/>
+                                </div>
+                                {if $idnex>0}<div class="input-group"><a href="javascript:void(0);" class="remove">X</a> </div>{/if}
+                            </div>
+                            {/loop}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">招聘信息</div>
+                        <textarea class="form-control" rows="3" name="zhaopin">{$result['zhaopin']}</textarea>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label"></label>
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <input type="submit" class="btn btn-danger" value="提交">
+                    <input type="hidden" name="token" value="{$_W['token']}">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $(function(){
+        $('#form1').submit(function(){
+            if(!$.trim($(':text[name="name"]').val())) {
+                util.message('请填商家名称', '', 'error');
+                return false;
+            }
+            if(!$.trim($(':text[name="logo"]').val())) {
+                util.message('请添加上商家logo', '', 'error');
+                return false;
+            }
+            if(!$.trim($(':text[name="address"]').val())) {
+                util.message('请填写商家地址', '', 'error');
+                return false;
+            }
+
+            if(!$.trim($(':text[name="tel"]').val())) {
+                util.message('请填写商家电话', '', 'error');
+                return false;
+            }
+
+            return true;
+        });
+        $("#add") .click(function(){
+            $("#InputsWrapper").append('<div class="form-inline" style="margin-bottom: 30px;">\n' +
+                '\n' +
+                '                            <div class="input-group">\n' +
+                '                                <div class="input-group-addon">服务名称</div>\n' +
+                '                                <input type="text" class="form-control" name="fwname[]" value=""/>\n' +
+                '                            </div>\n' +
+                '                            <div class="input-group">\n' +
+                '                                <div class="input-group-addon">服务价格</div>\n' +
+                '                                <input type="text" class="form-control" name="fwprice[]" value=""/>\n' +
+                '                            </div>\n' +
+                '                            <div class="input-group"><a href="javascript:void(0);" class="remove">X</a> </div>\n' +
+                '                        </div>');
+        });
+        $('body').on("click",'.remove',function(e){
+            $(this).parent('div').parent('div').remove();
+        })
+    });
+</script>
+{template 'common/footer'}

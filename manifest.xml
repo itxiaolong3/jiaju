@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://www.we7.cc" versionCode="">
+	<application setting="false">
+		<name><![CDATA[家居服务]]></name>
+		<identifie><![CDATA[jiaju]]></identifie>
+		<version><![CDATA[1.0]]></version>
+		<type><![CDATA[business]]></type>
+		<ability><![CDATA[家居服务]]></ability>
+		<description><![CDATA[家居服务]]></description>
+		<author><![CDATA[itxiaolong]]></author>
+		<url><![CDATA[https://jin.itxiaolong.cn]]></url>
+	</application>
+	<platform>
+		<subscribes>
+		</subscribes>
+		<handles>
+		</handles>
+		<rule embed="false" />
+		<card embed="false" />
+		<supports>
+			<item type="wxapp" />
+		</supports>
+	</platform>
+	<bindings>
+		<menu>
+			<entry title="管理中心" do="site" state="" direct="false" />
+		</menu>
+		<page>
+			<entry title="首页" do="/jiaju/pages/index/index" state="" direct="" />
+			<entry title="个人中心" do="/jiaju/pages/my/my" state="" direct="" />
+		</page>
+	</bindings>
+	<permissions>
+	</permissions>
+	<install><![CDATA[]]></install>
+	<uninstall><![CDATA[]]></uninstall>
+	<upgrade><![CDATA[]]></upgrade>
+</manifest>

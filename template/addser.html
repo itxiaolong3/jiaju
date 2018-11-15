@@ -1,0 +1,128 @@
+{template 'common/header-zunyang'}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">添加/编辑服务</h3>
+    </div>
+    <div class="panel-body">
+        <form action="" method="post" class="form-horizontal" role="form" id="form1">
+
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">所属分类</div>
+                        <select name="pid" class="form-control" id="pid">
+                            {if empty($typelist)}
+                            <option value="" selected="selected">暂无分类</option>
+                            {else}
+                            {loop $typelist $v}
+                            <option value="{$v['tid']}" {if $result['pid']==$v['tid']} selected="selected"{/if}>{$v['name']}</option>
+                            {/loop}
+                            {/if}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">服务名称</div>
+                        <input type="text" class="form-control" name="name" value="{$result['name']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">业务描述</div>
+                        <input type="text" class="form-control" name="desc" value="{$result['desc']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <div class="col-md-3">
+                        <div class="input-group-addon" >等级类型一</div>
+                        <input type="text" name="onegrage" value="{$result['onegrage']}" class="form-control">
+                    </div>
+                    <div class="col-md-2 ">
+                        <div class="input-group-addon">价格</div>
+                        <input type="text" name="oneprice" value="{$result['oneprice']}"class="form-control">
+                    </div>
+                    <div class="col-md-2 ">
+                        <div class="input-group-addon">平台比例<span style="font-weight: bold;">(*%)</span></div>
+                        <input type="text" name="onescale" value="{$result['onescale']}" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <div class="col-md-3 ">
+                        <div class="input-group-addon">等级类型二</div>
+                        <input type="text" name="twograge" value="{$result['twograge']}" class="form-control">
+                    </div>
+                    <div class="col-md-2 ">
+                        <div class="input-group-addon">价格</div>
+                        <input type="text" name="twoprice" value="{$result['twoprice']}" class="form-control">
+                    </div>
+                    <div class="col-md-2 ">
+                        <div class="input-group-addon">平台比例<span style="font-weight: bold;">(*%)</span></div>
+                        <input type="text" name="twoscale" value="{$result['twoscale']}" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <div class="col-md-3 ">
+                        <div class="input-group-addon">等级类型三</div>
+                        <input type="text" name="threegrage" value="{$result['threegrage']}" class="form-control">
+                    </div>
+                    <div class="col-md-2 ">
+                        <div class="input-group-addon">价格</div>
+                        <input type="text" name="threeprice" value="{$result['threeprice']}" class="form-control">
+                    </div>
+                    <div class="col-md-2 ">
+                        <div class="input-group-addon">平台比例<span style="font-weight: bold;">(*%)</span></div>
+                        <input type="text" name="threescale" value="{$result['threescale']}" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">上传图片</div>
+                        {php echo tpl_form_field_image('img',$result['img']);}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label"></label>
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <input type="submit" class="btn btn-danger" value="提交">
+                    <input type="hidden" name="token" value="{$_W['token']}">
+                    <input type="hidden" name="id" value="{$result['sid']}" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('#form1').submit(function () {
+            if (!$.trim($(':text[name="img"]').val())) {
+                util.message('请选择图片', '', 'error');
+                return false;
+            }
+            if (!$.trim($(':text[name="name"]').val())) {
+                util.message('标题不可空', '', 'error');
+                return false;
+            }
+            return true;
+        });
+
+        $('body').on("click", '.remove', function (e) {
+            $(this).parent('div').parent('div').remove();
+        })
+    });
+</script>
+{template 'common/footer'}

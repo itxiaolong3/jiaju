@@ -1,0 +1,85 @@
+{template 'common/header-base'}
+	<div class="navbar navbar-inverse navbar-static-top" role="navigation" style="position:static;">
+		<div class="container-fluid">
+			
+			<ul class="nav navbar-nav">
+				<li><a href="./?refresh"><i class="fa fa-reply-all"></i>返回系统</a></li>
+				
+				
+				
+			</ul>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" style="display:block; max-width:200px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; "><i class="fa fa-group"></i>{$_W['account']['name']} <b class="caret"></b></a>
+					
+				</li>
+				<li class="dropdown">
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" style="display:block; max-width:185px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; "><i class="fa fa-user"></i>{$_W['user']['username']} ({if $_W['role'] == 'founder'}系统管理员{elseif $_W['role'] == 'manager'}公众号管理员{else}公众号操作员{/if}) <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="{url 'user/profile/profile'}" target="_blank"><i class="fa fa-weixin fa-fw"></i> 我的账号</a></li>
+						
+						<li><a href="{url 'user/logout'}"><i class="fa fa-sign-out fa-fw"></i> 退出系统</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		
+		<div class="row">
+			{php $frames = empty($frames) ? $GLOBALS['frames'] : $frames; _calc_current_frames($frames);}
+			{if !empty($frames)}
+				<div class="col-xs-12 col-sm-3 col-lg-2 big-menu">
+					
+					{loop $frames $k $frame}
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">{$frame['title']}</h4>
+							<a class="panel-collapse collapsed" data-toggle="collapse" href="#frame-{$k}">
+								<i class="fa fa-chevron-circle-down"></i>
+							</a>
+						</div>
+						<ul class="list-group collapse {if $frame['active']}in{/if}" id="frame-{$k}">
+                        	
+							{loop $frame['items'] $link}
+							{if !empty($link['append'])}
+							<li class="list-group-item{$link['active']}" onclick="window.location.href = '{$link['url']}';" style="cursor:pointer;" kw="{$link['title']}">
+								{$link['title']}
+								<a class="pull-right" href="{$link['append']['url']}">{$link['append']['title']}</a>
+							</li>
+							{else}
+                            
+							<a class="list-group-item{$link['active']}" href="{$link['url']}" kw="{$link['title']}">{$link['title']}</a>
+							{/if}
+							{/loop}
+						</ul>
+					</div>
+					{/loop}
+					<script type="text/javascript">
+						require(['bootstrap'], function(){
+							$('#search-menu input').keyup(function() {
+								var a = $(this).val();
+								$('.big-menu .list-group-item, .big-menu .panel-heading').hide();
+								$('.big-menu .list-group-item').each(function() {
+									$(this).css('border-left', '0');
+									if(a.length > 0 && $(this).attr('kw').indexOf(a) >= 0) {
+										$(this).parents(".panel").find('.panel-heading').show();
+										$(this).show().css('border-left', '3px #428bca double');
+									}
+								});
+								if(a.length == 0) {
+									$('.big-menu .list-group-item, .big-menu .panel-heading').show();
+								}
+							});
+						});
+					</script>
+				</div>
+				<div class="col-xs-12 col-sm-9 col-lg-10">
+				<style>.topNav{border-bottom-color: rgb(0, 0, 0);border-bottom-width: 0.1em;border-bottom-style: inset;}</style>
+					
+			{else}
+				<div>
+			{/if}
+		

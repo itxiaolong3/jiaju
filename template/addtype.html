@@ -1,0 +1,64 @@
+{template 'common/header-zunyang'}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">添加/编辑分类</h3>
+    </div>
+    <div class="panel-body">
+        <form action="" method="post" class="form-horizontal" role="form" id="form1">
+		<div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">排序</div>
+                        <input type="number" class="form-control" id="typename" name="orders" value="{$result['orders']}"/>
+                    </div>
+                    <span class="help-block">*越大，在小程序端显示越靠前</span>
+                </div>
+            </div>
+          <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">分类名称</div>
+                        <input type="text" class="form-control" name="name" value="{$result['name']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">上传图片</div>
+                        {php echo tpl_form_field_image('img',$result['img']);}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label"></label>
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <input type="submit" class="btn btn-danger" value="提交">
+                    <input type="hidden" name="token" value="{$_W['token']}">
+                    <input type="hidden" name="id" value="{$result['tid']}" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('#form1').submit(function () {
+            if (!$.trim($(':text[name="img"]').val())) {
+                util.message('请选择图片', '', 'error');
+                return false;
+            }
+           if ($("#typename").val()<1) {
+                util.message('排序不可小于0', '', 'error');
+                return false;
+            }
+            return true;
+        });
+
+        $('body').on("click", '.remove', function (e) {
+            $(this).parent('div').parent('div').remove();
+        })
+    });
+</script>
+{template 'common/footer'}

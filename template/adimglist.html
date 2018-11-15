@@ -1,0 +1,47 @@
+{template 'common/header-zunyang'}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        轮播图图片
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th style="width:80px; text-align:center;">id</th>
+                <th style="width:100px; text-align:center;">图片</th>
+                <!--<th style="width:100px; text-align:center;">跳转地址</th>-->
+                <th style="width:100px; text-align:center;">添加时间</th>
+                <th style="width:100px; text-align:center;">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {if empty($result_list)}
+            <tr>
+                <td colspan="7" style="text-align: center;">暂无图片</td>
+            </tr>
+            {else}
+            {loop $result_list $v}
+            <tr>
+                <td style="height:80px; line-height:80px; text-align:center;">{$v['aid']}</td>
+                <td style="text-align:center;"><img style="width:100px; height:80px;" src="{php echo tomedia($v['adimg'])}" /></td>
+                <!--<td style="height:80px; line-height:80px; text-align:center;">{$v['adurl']}</td>-->
+                <td style="height:80px; line-height:80px; text-align:center;">{php echo date('Y-m-d H:m:s',$v['addtime'])}</td>
+                <td style="height:80px; line-height:80px; text-align:center;">
+                    <a href="{php echo $this->createWebUrl('editad',array('m'=>'jindao_adimg','id'=>$v['aid']))}">编辑</a>&nbsp;&nbsp;
+                    <a href="{php echo $this->createWebUrl('delad',array('m'=>'jindao_adimg','id'=>$v['aid']))}" id="deles">删除</a>
+                </td>
+            </tr>
+            {/loop}
+            {/if}
+            </tbody>
+        </table>
+    </div>
+    <div class="text-right">
+        {$pager}
+    </div>
+</div>
+</div>
+<script>
+
+</script>
+{template 'common/footer'}

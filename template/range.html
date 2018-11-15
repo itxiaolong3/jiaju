@@ -1,0 +1,42 @@
+{template 'common/header-zunyang'}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        范围列表
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th style="width:80px; text-align:center;">编号</th>
+                <th style="width:100px; text-align:center;">范围名称</th>
+                <th style="width:120px; text-align:center;">添加时间</th>
+                <th style="width:80px; text-align:center;">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {if empty($fenlei_list)}
+            <tr>
+                <td colspan="5" style="text-align: center;">暂无经营范围</td>
+            </tr>
+            {else}
+            {loop $fenlei_list $v}
+            <tr>
+                <td style="height:50px; line-height:50px; text-align:center;">{$v['fid']}</td>
+                <td style="height:50px; line-height:50px; text-align:center;">{$v['fname']}</td>
+                <td style="height:50px; line-height:50px; text-align:center;">{php echo date('Y-m-d H:m:s',$v['addtime'])}</td>
+                <td style="height:50px; line-height:50px; text-align:center;">
+                    <a href="{php echo $this->createWebUrl('editrange',array('m'=>'jindao','id'=>$v['fid']))}">编辑</a>&nbsp;&nbsp;
+                    <a href="{php echo $this->createWebUrl('delrange',array('m'=>'jindao','id'=>$v['fid']))}">删除</a>
+                </td>
+            </tr>
+            {/loop}
+            {/if}
+            </tbody>
+        </table>
+    </div>
+    <div class="text-right">
+        {$pager}
+    </div>
+</div>
+</div>
+{template 'common/footer'}

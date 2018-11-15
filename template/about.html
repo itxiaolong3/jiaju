@@ -1,0 +1,75 @@
+{template 'common/header-zunyang'}
+<div class="panel panel-default">
+    <form action="" method="post" class="form-horizontal" role="form" id="form1" >
+        <div class="panel-heading">
+            <h3 class="panel-title">关于</h3>
+        </div>
+		<div class="panel-body">
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">图片</div>
+                        {php echo tpl_form_field_image('logoimg',$item['logoimg']);}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">简介</div>
+                        <textarea type="text"  id='repcontent' class="form-control" name="contents" autofocus>{$item['contents']}</textarea>
+                    </div>
+                </div>
+            </div>
+        <div class="form-group">
+            <div class="col-sm-8 col-lg-9 col-xs-12">
+                <div class="input-group">
+                    <div class="input-group-addon">微信公众号</div>
+                    <input type="text" class="form-control" name="gzh" value="{$item['gzh']}"/>
+                </div>
+            </div>
+        </div>
+
+		<div class="form-group">
+            <div class="col-sm-8 col-lg-9 col-xs-12">
+                <div class="input-group">
+                    <div class="input-group-addon">客服电话</div>
+                    <input type="text" class="form-control" name="phones" value="{$item['phones']}"/>
+                </div>
+            </div>
+        </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">联系邮箱</div>
+                        <input type="text" class="form-control" name="emails" value="{$item['emails']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">入驻申请</div>
+                        <input type="text" class="form-control" name="shen" value="{$item['shen']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">公司网站</div>
+                        <input type="text" class="form-control" name="companys" value="{$item['companys']}"/>
+                    </div>
+                </div>
+            </div>
+        <div class="form-group">
+            <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label"></label>
+            <div class="col-sm-8 col-lg-9 col-xs-12">
+                <input type="submit" class="btn btn-danger" value="提交">
+                <input type="hidden" name="token" value="{$_W['token']}">
+            </div>
+        </div>
+		</div>
+    </form>
+</div>
+{template 'common/footer'}
