@@ -1,4 +1,10 @@
 <?php
+/**
+ *
+ *
+ * @author panshikj
+ * @url http://www.zunyangkj.com
+ */
 defined('IN_IA') or exit('Access Denied');
 header("Access-Control-Allow-Origin: *");
 require_once 'AipSpeech.php';
@@ -241,7 +247,6 @@ class jiajuModuleWxapp extends WeModuleWxapp
         $sid=$_GPC['sid'];
         $info=pdo_get('jiaju_sertype',array('uniacid'=>$_W['uniacid'],'sid'=>$sid));
         $info['img']=tomedia($info['img']);
-
         $grageandprice=array(
             array("grage"=>$info['onegrage'],"price"=>$info['oneprice'],"bili"=>$info['onescale']),
             array("grage"=>$info['twograge'],"price"=>$info['twoprice'],"bili"=>$info['twoscale']),
@@ -309,6 +314,7 @@ class jiajuModuleWxapp extends WeModuleWxapp
 
     }
     //获取用户信息
+
     public function doPageGetuserinfo(){
         global $_W, $_GPC;
         $openid=$_GPC['openid'];
@@ -581,7 +587,7 @@ class jiajuModuleWxapp extends WeModuleWxapp
         $openid=$_GPC['openid'];
         $type=$_GPC['active'];//0全部 1待受理 2服务中 3待评价 4已完成
         if(empty($type)){
-            $result=pdo_getall('jiaju_order',array('uniacid'=>$_W['uniacid'],'openid'=>$openid), array() , '' , 'addtime DESC' );
+            $result=pdo_getall('jiaju_order',array('uniacid'=>$_W['uniacid'],'openid'=>$openid), array() , '' , 'addtime DESC');
         }else{
             $sql="select * from " . tablename("jiaju_order") . " where `uniacid`=:uniacid and `openid`=:openid and `state`=:state order by addtime desc";
             $params = array(
@@ -618,7 +624,35 @@ class jiajuModuleWxapp extends WeModuleWxapp
         $data['Data']=$detailinfo;
         echo json_encode($data);
     }
-    /////////////////////////////////////////////////////////////
+    //提交申请入驻
+    public function doPagePostsq(){
+        global $_W, $_GPC;
+        $openid=$_GPC['openid'];
+        $headerimg=pdo_get('jiaju_user',array('openId'=>$openid),array('headerimg'));
+        $data['openid']=$openid;
+        $data['tel']=$_GPC['tel'];
+        $data['headerimg']=$headerimg['headerimg'];
+        $data['IDnum']=$_GPC['IDnum'];
+        $data['name']=$_GPC['name'];
+        $data['brdata']=$_GPC['brdata'];
+        $data['idimg1']=$_GPC['idimg1'];
+        $data['idimg2']=$_GPC['idimg2'];
+        $data['goodat']=$_GPC['goodat'];
+        $data['uniacid']=$_W['uniacid'];
+        $data['addtime']=date('Y-m-d H:i:s',time());
+        $addre=pdo_insert("jiaju_shifu",$data);
+        $newid=pdo_insertid();
+        if ($addre){
+            pdo_update('jiaju_user',array('state'=>1),array('openId'=>$openid));
+            $resdata['status']=1;
+            $resdata['msg']='提交成功';
+        }else{
+            $resdata['status']=0;
+            $resdata['msg']='提交失败';
+        }
+        echo json_encode($resdata);
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //我的接口结束
     //获取问题
     public function doPageGetprob()
@@ -834,22 +868,6 @@ class jiajuModuleWxapp extends WeModuleWxapp
         $data['grade'] = $_GPC['grade'];
         $data['c_code'] = $_GPC['c_code'];
         $data['endtime'] = $_GPC['endtime'];
-
-//        //把转义符恢复htmlspecialchars_decode
-//        $s_img = htmlspecialchars_decode($_GPC['s_img']);
-//        //把引号替换
-//        $s_img = str_replace('"', '', $s_img);
-//        //剔除[ ]
-//        $s_img = ltrim($s_img, '[');
-//        $s_img = substr($s_img, 0, -1);
-//
-//        //$data['img'] =$deal;//这里也有可能是数组
-//        $data['s_img'] = $s_img;
-
-        //$data['s_img'] = $_GPC['s_img'];
-//        $data['s_img'] = ltrim($_GPC['s_img'], 'https://pj.dede1.com/attachment/');
-//        $data['yingyeimg'] = ltrim($_GPC['yingyeimg'], 'https://pj.dede1.com/attachment/');
-//        $data['travelallowimg'] = ltrim($_GPC['travelallowimg'], 'https://pj.dede1.com/attachment/');
         $data['s_img']=substr($_GPC['s_img'],32);
         $data['yingyeimg']=substr($_GPC['yingyeimg'],32);
         $data['travelallowimg']=substr($_GPC['travelallowimg'],32);
