@@ -20,11 +20,11 @@
         <table class="table">
             <thead>
             <tr>
-                <th style="width:80px; text-align:center;">id</th>
-                <th style="width:70px; text-align:center;">用户头像</th>
-                <th style="width:100px; text-align:center;">昵称</th>
-                <th style="width:100px; text-align:center;">openid</th>
-                <th style="width:100px; text-align:center;">登录时间</th>
+                <th style="width:20px; text-align:center;">id</th>
+                <th style="width:50px; text-align:center;">用户头像</th>
+                <th style="width:50px; text-align:center;">昵称</th>
+                <th style="width:70px; text-align:center;">openid</th>
+                <th style="width:80px; text-align:center;">登录时间</th>
             </tr>
             </thead>
             <tbody>
@@ -35,11 +35,11 @@
             {else}
             {loop $result_list $v}
             <tr>
-                <td style="height:80px; line-height:80px; text-align:center;">{$v['id']}</td>
-                <td style="height:80px; line-height:80px; text-align:center;"><img style="width:90px; height:80px;" src="{$v['headerimg']}" /></td>
-                <td style="height:80px; line-height:80px; text-align:center;">{if $v['nickname']==''}暂无{else}{$v['nickname']}{/if}</td>
-                <td style="height:80px; line-height:80px; text-align:center;">{$v['openId']}</td>
-                <td style="height:80px;width:200px; line-height:80px; text-align:center;">{$v['addtime']}</td>
+                <td style="line-height:50px; text-align:center;">{$v['id']}</td>
+                <td style="height:50px; line-height:50px; text-align:center;"><img style="width:50px; height:50px;" src="{$v['headerimg']}" /></td>
+                <td style="height:50px; line-height:50px; text-align:center;">{if $v['nickname']==''}暂无{else}{$v['nickname']}{/if}</td>
+                <td style="height:50px; line-height:50px; text-align:center;">{$v['openId']}</td>
+                <td style="height:50px;width:200px; line-height:50px; text-align:center;">{$v['addtime']}</td>
             </tr>
             {/loop}
             {/if}

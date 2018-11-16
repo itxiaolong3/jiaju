@@ -243,9 +243,9 @@ class jiajuModuleWxapp extends WeModuleWxapp
         $info['img']=tomedia($info['img']);
 
         $grageandprice=array(
-            array("grage"=>$info['onegrage'],"price"=>$info['oneprice']),
-            array("grage"=>$info['twograge'],"price"=>$info['twoprice']),
-            array("grage"=>$info['threegrage'],"price"=>$info['threeprice']),
+            array("grage"=>$info['onegrage'],"price"=>$info['oneprice'],"bili"=>$info['onescale']),
+            array("grage"=>$info['twograge'],"price"=>$info['twoprice'],"bili"=>$info['twoscale']),
+            array("grage"=>$info['threegrage'],"price"=>$info['threeprice'],"bili"=>$info['threescale']),
         );
         $dealarr=array();
         foreach ($grageandprice as $k=>$v){
@@ -463,6 +463,7 @@ class jiajuModuleWxapp extends WeModuleWxapp
         $data['remark']=$_GPC['remark'];
         $data['price']=$_GPC['price'];
         $data['grage']=$_GPC['grage'];
+        $data['bili']=$_GPC['bili'];
         $data['imgs']=$_GPC['imgs'];
         $data['openid']=$openid;
         $data['uniacid']=$_W['uniacid'];

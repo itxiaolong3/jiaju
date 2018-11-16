@@ -725,6 +725,72 @@ class jiajuModuleSite extends WeModuleSite
         include $this->template("userlist");
 
     }
+    //全部订单
+    public function doWebAllorder(){
+        global $_W, $_GPC;
+        $table = "jiaju_order";
+        $pindex = max(1, intval($_GPC['page']));
+        $psize = 10;
+        $getkeyword=$_GPC['keywords'];
+        $where=" ordernum LIKE '%".$getkeyword."%'";
+        $sql = "select * from " . tablename($table) ." where uniacid=:uniacid and ".$where." order by addtime desc limit " . ($pindex - 1) * $psize . ',' . $psize;
+        $params = array(
+            ':uniacid' => $_W['uniacid'],
+        );
+        $result_list = pdo_fetchall($sql, $params);
+        $sql2 = "select count(*) from " . tablename($table) . " where `uniacid`=:uniacid";
+        $total = pdo_fetchcolumn($sql2, $params);
+        $pager = pagination($total, $pindex, $psize);
+        include $this->template("allorderlist");
+    }
+    //订单详细
+    public function doWebOrderdetail()
+    {
+        global $_W, $_GPC;
+        $table = "jiaju_order";
+        $id = intval($_GPC['id']);
+        if ($id == "") {
+            message("参数错误", referer(), 'error');
+        } else {
+            $sql = "select * from " . tablename($table) . " where `uniacid`=:uniacid and `id`=:id";
+            $params = array(
+                ':uniacid' => $_W['uniacid'],
+                ':id' => $id
+            );
+            $result = pdo_fetch($sql, $params);
+            $result['imgs']=explode(',',$result['imgs']);
+            $result['pprice']=$result['price']*($result['bili']/100);
+            if (empty($result)) {
+                message("信息不存在", referer(), 'error');
+            } else {
+                if ($_W['ispost']) {
+                    //接单
+                    $arr = array();
+                    $arr['uniacid'] = $_W['uniacid'];
+                    $arr['detaildesc'] = $_GPC['detaildesc'];
+                    if (empty($_GPC['sfid'])&&empty($_GPC['did'])) {
+                        message('请选择服务商家或者师傅', referer(), 'error');
+                    } else {
+                        $arr['sfid'] = $_GPC['sfid'];
+                        $arr['did'] = $_GPC['did'];
+                    }
+                    $arr['jdtime'] = date('Y-m-d H:i:s',time());
+                    $arr['state'] = 2;
+                    $edit_result = pdo_update('jiaju_order', $arr, array('uniacid' => $_W['uniacid'], 'id' => $id));
+                    if (!empty($edit_result)) {
+                        //跳转到已派单
+                        message('派单成功', $this->createWebUrl('Sering'), 'success');
+                    } else {
+                        message('派单失败', referer(), 'error');
+                    }
+                } else {
+                    include $this->template('orderdetail');
+                }
+
+            }
+
+        }
+    }
     /*经营范围列表*/
     public function doWebRange()
     {
@@ -883,17 +949,104 @@ class jiajuModuleSite extends WeModuleSite
         $frames['set']['items']['site']['title'] = '站点设置';
         $frames['set']['items']['site']['actions'] = array();
         $frames['set']['items']['site']['active'] = '';
-        $frames['set']['items']['aboutme']['url'] = url('site/entry/aboutme', array('m' => $name));
-        $frames['set']['items']['aboutme']['title'] = '关于设置';
-        $frames['set']['items']['aboutme']['actions'] = array();
-        $frames['set']['items']['aboutme']['active'] = '';
+
+        // $frames['set']['items']['aboutme']['url'] = url('site/entry/aboutme', array('m' => $name));
+        //$frames['set']['items']['aboutme']['title'] = '关于设置';
+        // $frames['set']['items']['aboutme']['actions'] = array();
+        //  $frames['set']['items']['aboutme']['active'] = '';
 
         $frames['set']['items']['xieyi']['url'] = url('site/entry/xieyi', array('m' => $name));
         $frames['set']['items']['xieyi']['title'] = '协议设置';
         $frames['set']['items']['xieyi']['actions'] = array();
         $frames['set']['items']['xieyi']['active'] = '';
 
-        //////////////////////////////
+        ////////////////////////////////////////////
+        $frames['jz']['title'] = '家政管理';
+        $frames['jz']['active'] = '';
+        $frames['jz']['items'] = array();
+
+        $frames['jz']['items']['servicelist']['url'] = url('site/entry/serlist', array('m' => $name));
+        $frames['jz']['items']['servicelist']['title'] = '服务列表';
+        $frames['jz']['items']['servicelist']['actions'] = array();
+        $frames['jz']['items']['servicelist']['active'] = '';
+
+        $frames['jz']['items']['service']['url'] = url('site/entry/addser', array('m' => $name));
+        $frames['jz']['items']['service']['title'] = '添加服务';
+        $frames['jz']['items']['service']['actions'] = array();
+        $frames['jz']['items']['service']['active'] = '';
+        ////////////////////////////////////////////////////////////
+        $frames['seller']['title'] = '商家管理';
+        $frames['seller']['active'] = '';
+        $frames['seller']['items'] = array();
+
+        $frames['seller']['items']['list1']['url'] = url('site/entry/list', array('m' => $name));
+        $frames['seller']['items']['list1']['title'] = '商家列表';
+        $frames['seller']['items']['list1']['actions'] = array();
+        $frames['seller']['items']['list1']['active'] = '';
+
+        $frames['seller']['items']['addseller']['url'] = url('site/entry/addseller', array('m' => $name));
+        $frames['seller']['items']['addseller']['title'] = '添加商家';
+        $frames['seller']['items']['addseller']['actions'] = array();
+        $frames['seller']['items']['addseller']['active'] = '';
+        ////////////////////////
+        $frames['order']['title'] = '订单管理';
+        $frames['order']['active'] = '';
+        $frames['order']['items'] = array();
+
+        $frames['order']['items']['allorder']['url'] = url('site/entry/allorder', array('m' => $name));
+        $frames['order']['items']['allorder']['title'] = '全部订单';
+        $frames['order']['items']['allorder']['actions'] = array();
+        $frames['order']['items']['allorder']['active'] = '';
+
+        $frames['order']['items']['wait']['url'] = url('site/entry/wait', array('m' => $name));
+        $frames['order']['items']['wait']['title'] = '待派单';
+        $frames['order']['items']['wait']['actions'] = array();
+        $frames['order']['items']['wait']['active'] = '';
+
+        $frames['order']['items']['sering']['url'] = url('site/entry/sering', array('m' => $name));
+        $frames['order']['items']['sering']['title'] = '已派单';
+        $frames['order']['items']['sering']['actions'] = array();
+        $frames['order']['items']['sering']['active'] = '';
+
+        $frames['order']['items']['final']['url'] = url('site/entry/final', array('m' => $name));
+        $frames['order']['items']['final']['title'] = '已完成';
+        $frames['order']['items']['final']['actions'] = array();
+        $frames['order']['items']['final']['active'] = '';
+
+        $frames['order']['items']['cancel']['url'] = url('site/entry/cancel', array('m' => $name));
+        $frames['order']['items']['cancel']['title'] = '取消订单';
+        $frames['order']['items']['cancel']['actions'] = array();
+        $frames['order']['items']['cancel']['active'] = '';
+        ////////////////////////
+//        $frames['fenlei']['title'] = '经营范围管理';
+//        $frames['fenlei']['active'] = '';
+//        $frames['fenlei']['items'] = array();
+//
+//        $frames['fenlei']['items']['range']['url'] = url('site/entry/range', array('m' => $name));
+//        $frames['fenlei']['items']['range']['title'] = '经营范围列表';
+//        $frames['fenlei']['items']['range']['actions'] = array();
+//        $frames['fenlei']['items']['range']['active'] = '';
+//
+//        $frames['fenlei']['items']['addrange']['url'] = url('site/entry/addrange', array('m' => $name));
+//        $frames['fenlei']['items']['addrange']['title'] = '添加经营范围';
+//        $frames['fenlei']['items']['addrange']['actions'] = array();
+//        $frames['fenlei']['items']['addrange']['active'] = '';
+
+        /////////////////////////////
+//        $frames['pro']['title'] = '问题管理';
+//        $frames['pro']['active'] = '';
+//        $frames['pro']['items'] = array();
+//
+//        $frames['pro']['items']['pro']['url'] = url('site/entry/problist', array('m' => $name));
+//        $frames['pro']['items']['pro']['title'] = '问题列表';
+//        $frames['pro']['items']['pro']['actions'] = array();
+//        $frames['pro']['items']['pro']['active'] = '';
+//
+//        $frames['pro']['items']['addp']['url'] = url('site/entry/addprob', array('m' => $name));
+//        $frames['pro']['items']['addp']['title'] = '新增问题';
+//        $frames['pro']['items']['addp']['actions'] = array();
+//        $frames['pro']['items']['addp']['active'] = '';
+//////////////////////////////
         $frames['ad']['title'] = '轮播图管理';
         $frames['ad']['active'] = '';
         $frames['ad']['items'] = array();
@@ -935,64 +1088,6 @@ class jiajuModuleSite extends WeModuleSite
         $frames['hot']['items']['addhot']['title'] = '新增文章';
         $frames['hot']['items']['addhot']['actions'] = array();
         $frames['hot']['items']['addhot']['active'] = '';
-        ////////////////////////
-        $frames['seller']['title'] = '商家管理';
-        $frames['seller']['active'] = '';
-        $frames['seller']['items'] = array();
-
-        $frames['seller']['items']['list1']['url'] = url('site/entry/list', array('m' => $name));
-        $frames['seller']['items']['list1']['title'] = '商家列表';
-        $frames['seller']['items']['list1']['actions'] = array();
-        $frames['seller']['items']['list1']['active'] = '';
-
-        $frames['seller']['items']['addseller']['url'] = url('site/entry/addseller', array('m' => $name));
-        $frames['seller']['items']['addseller']['title'] = '添加商家';
-        $frames['seller']['items']['addseller']['actions'] = array();
-        $frames['seller']['items']['addseller']['active'] = '';
-
-        ////////////////////////////////////////////
-        $frames['jz']['title'] = '家政管理';
-        $frames['jz']['active'] = '';
-        $frames['jz']['items'] = array();
-
-        $frames['jz']['items']['servicelist']['url'] = url('site/entry/serlist', array('m' => $name));
-        $frames['jz']['items']['servicelist']['title'] = '服务列表';
-        $frames['jz']['items']['servicelist']['actions'] = array();
-        $frames['jz']['items']['servicelist']['active'] = '';
-
-        $frames['jz']['items']['service']['url'] = url('site/entry/addser', array('m' => $name));
-        $frames['jz']['items']['service']['title'] = '添加服务';
-        $frames['jz']['items']['service']['actions'] = array();
-        $frames['jz']['items']['service']['active'] = '';
-        ////////////////////////////////////////////////////////////
-//        $frames['fenlei']['title'] = '经营范围管理';
-//        $frames['fenlei']['active'] = '';
-//        $frames['fenlei']['items'] = array();
-//
-//        $frames['fenlei']['items']['range']['url'] = url('site/entry/range', array('m' => $name));
-//        $frames['fenlei']['items']['range']['title'] = '经营范围列表';
-//        $frames['fenlei']['items']['range']['actions'] = array();
-//        $frames['fenlei']['items']['range']['active'] = '';
-//
-//        $frames['fenlei']['items']['addrange']['url'] = url('site/entry/addrange', array('m' => $name));
-//        $frames['fenlei']['items']['addrange']['title'] = '添加经营范围';
-//        $frames['fenlei']['items']['addrange']['actions'] = array();
-//        $frames['fenlei']['items']['addrange']['active'] = '';
-
-        /////////////////////////////
-//        $frames['pro']['title'] = '问题管理';
-//        $frames['pro']['active'] = '';
-//        $frames['pro']['items'] = array();
-//
-//        $frames['pro']['items']['pro']['url'] = url('site/entry/problist', array('m' => $name));
-//        $frames['pro']['items']['pro']['title'] = '问题列表';
-//        $frames['pro']['items']['pro']['actions'] = array();
-//        $frames['pro']['items']['pro']['active'] = '';
-//
-//        $frames['pro']['items']['addp']['url'] = url('site/entry/addprob', array('m' => $name));
-//        $frames['pro']['items']['addp']['title'] = '新增问题';
-//        $frames['pro']['items']['addp']['actions'] = array();
-//        $frames['pro']['items']['addp']['active'] = '';
 
         /////////////////////////////
         $frames['user']['title'] = '用户管理';

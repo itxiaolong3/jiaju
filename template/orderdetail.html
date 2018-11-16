@@ -1,0 +1,108 @@
+{template 'common/header-zunyang'}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">订单详细</h3>
+        <a href="javascript :;" onClick="javascript :history.back(-1);"><span class="label label-success">返回</span></a>
+    </div>
+    <div class="panel-body">
+        <form action="" method="post" class="form-horizontal" role="form" id="form1" >
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">服务类型</div>
+                        <input type="text" class="form-control" name=""  value="{$result['sertype']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">备注信息</div>
+                        <input type="text" class="form-control" name="" value="{$result['remark']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">用户地址</div>
+                        <input type="text" class="form-control" name="" value="{$result['address']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">联系电话</div>
+                        <input type="text" class="form-control" name="" value="{$result['mobile']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">姓名</div>
+                        <input type="text" class="form-control" name="" value="{$result['true_name']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">价格</div>
+                        <input type="text" class="form-control" name="" value="{$result['price']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">平台收费({$result['bili']}%)</div>
+                        <input type="text" class="form-control" name="" value="{$result['pprice']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">附图</div>
+                        {loop $result['imgs'] $v}
+                        <a target="_blank" href="{$v}"><img src="{$v}" width="30%" height="500px;"/></a>
+                        {/loop}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label"></label>
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <a href="javascript :;" onClick="javascript :history.back(-1);"><span class="label label-success">返回</span></a>
+                </div>
+            </div>
+            <!--<div class="form-group">-->
+                <!--<label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label"></label>-->
+                <!--<div class="col-sm-8 col-lg-9 col-xs-12">-->
+                    <!--<input type="submit" class="btn btn-danger" value="提交">-->
+                    <!--<input type="hidden" name="token" value="{$_W['token']}">-->
+                <!--</div>-->
+            <!--</div>-->
+        </form>
+    </div>
+</div>
+<script>
+    $(function(){
+        $('#form1').submit(function(){
+
+            if (!$.trim($(':text[name="s_name"]').val())) {
+                util.message('请填商家名称', '', 'error');
+                return false;
+            }
+            return true;
+        });
+
+        $('body').on("click",'.remove',function(e){
+            $(this).parent('div').parent('div').remove();
+        })
+    });
+</script>
+{template 'common/footer'}
