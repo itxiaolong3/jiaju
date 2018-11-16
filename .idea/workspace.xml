@@ -14,8 +14,8 @@
       <file leaf-file-name="wxapp.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wxapp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="612" column="43" lean-forward="false" selection-start-line="612" selection-start-column="43" selection-end-line="612" selection-end-column="43" />
+            <state relative-caret-position="86">
+              <caret line="612" column="22" lean-forward="false" selection-start-line="612" selection-start-column="22" selection-end-line="612" selection-end-column="22" />
               <folding>
                 <element signature="n#doPageTest#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
                 <element signature="e#446#534#0#PHP" expanded="false" />
@@ -67,177 +67,30 @@
                 <element signature="e#9824#9935#0#PHP" expanded="false" />
                 <element signature="e#9949#10089#0#PHP" expanded="false" />
                 <element signature="e#10100#10284#0#PHP" expanded="false" />
-                <element signature="n#doPageGetuserinfo#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#10509#10675#0#PHP" expanded="false" />
-                <element signature="e#10594#10675#0#PHP" expanded="false" />
-                <element signature="n#doPageSaveadd#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#11412#13515#0#PHP" expanded="false" />
-                <element signature="e#11437#11626#0#PHP" expanded="false" />
-                <element signature="e#11639#12077#0#PHP" expanded="false" />
-                <element signature="e#11700#11977#0#PHP" expanded="false" />
-                <element signature="e#11907#11977#0#PHP" expanded="false" />
-                <element signature="e#11991#12077#0#PHP" expanded="false" />
-                <element signature="e#12183#12481#0#PHP" expanded="false" />
-                <element signature="e#12283#12481#0#PHP" expanded="false" />
-                <element signature="e#12532#13515#0#PHP" expanded="false" />
-                <element signature="e#12675#13113#0#PHP" expanded="false" />
-                <element signature="e#12736#13013#0#PHP" expanded="false" />
-                <element signature="e#12943#13013#0#PHP" expanded="false" />
-                <element signature="e#13027#13113#0#PHP" expanded="false" />
-                <element signature="e#13182#13468#0#PHP" expanded="false" />
-                <element signature="e#13276#13468#0#PHP" expanded="false" />
-                <element signature="n#doPageMyAddress#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#13742#13844#0#PHP" expanded="false" />
-                <element signature="n#doPagegetoneAdd#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#14057#14385#0#PHP" expanded="false" />
-                <element signature="e#14136#14385#0#PHP" expanded="false" />
-                <element signature="e#14238#14375#0#PHP" expanded="false" />
-                <element signature="n#doPageDelAdd#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#14730#14902#0#PHP" expanded="false" />
-                <element signature="e#14818#14902#0#PHP" expanded="false" />
-                <element signature="n#doPageAddFormId#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#15034#15336#0#PHP" expanded="false" />
-                <element signature="n#doPageSubmitOrder#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#16174#16497#0#PHP" expanded="false" />
-                <element signature="e#16414#16497#0#PHP" expanded="false" />
-                <element signature="n#getconfig#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#16754#16842#0#PHP" expanded="false" />
-                <element signature="e#16902#16990#0#PHP" expanded="false" />
-                <element signature="n#randNum#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#17135#17239#0#PHP" expanded="false" />
-                <element signature="n#sendweimsg#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="n#doPageUserOrder#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#19766#20390#0#PHP" expanded="false" />
-                <element signature="e#19923#20390#0#PHP" expanded="false" />
-                <element signature="e#20105#20241#0#PHP" expanded="false" />
-                <element signature="e#20399#20494#0#PHP" expanded="false" />
-                <element signature="n#doPageGetordercount#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#20687#20881#0#PHP" expanded="false" />
-                <element signature="e#20915#21109#0#PHP" expanded="false" />
-                <element signature="e#21144#21338#0#PHP" expanded="false" />
-                <element signature="n#doPagegetOrderDetail#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="n#doPageGetprob#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#21987#22045#0#PHP" expanded="false" />
-                <element signature="e#22102#22327#0#PHP" expanded="false" />
-                <element signature="e#22202#22327#0#PHP" expanded="false" />
-                <element signature="n#doPageGetabout#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#22723#23008#0#PHP" expanded="false" />
-                <element signature="e#22823#23008#0#PHP" expanded="false" />
-                <element signature="n#doPageGetxieyi#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#23404#23629#0#PHP" expanded="false" />
-                <element signature="e#23504#23629#0#PHP" expanded="false" />
-                <element signature="n#doPageCheckinfo#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#24014#24102#0#PHP" expanded="false" />
-                <element signature="e#24162#24250#0#PHP" expanded="false" />
-                <element signature="e#24424#25130#0#PHP" expanded="false" />
-                <element signature="e#24600#24703#0#PHP" expanded="false" />
-                <element signature="e#24766#25011#0#PHP" expanded="false" />
-                <element signature="e#24883#25011#0#PHP" expanded="false" />
-                <element signature="e#25023#25130#0#PHP" expanded="false" />
-                <element signature="n#doPagePostuploadimg#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#25617#25933#0#PHP" expanded="false" />
-                <element signature="e#26005#26302#0#PHP" expanded="false" />
-                <element signature="e#26311#26592#0#PHP" expanded="false" />
-                <element signature="e#26602#26692#0#PHP" expanded="false" />
-                <element signature="e#26924#27183#0#PHP" expanded="false" />
-                <element signature="e#27192#27472#0#PHP" expanded="false" />
-                <element signature="n#doPagePostshenqing#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#28972#29013#0#PHP" expanded="false" />
-                <element signature="e#29331#29365#0#PHP" expanded="false" />
-                <element signature="e#29964#32833#0#PHP" expanded="false" />
-                <element signature="e#30145#30179#0#PHP" expanded="false" />
-                <element signature="e#30337#32833#0#PHP" expanded="false" />
-                <element signature="e#30515#32833#0#PHP" expanded="false" />
-                <element signature="e#30691#32833#0#PHP" expanded="false" />
-                <element signature="e#30863#32833#0#PHP" expanded="false" />
-                <element signature="e#31034#32833#0#PHP" expanded="false" />
-                <element signature="e#31211#32833#0#PHP" expanded="false" />
-                <element signature="e#31389#32833#0#PHP" expanded="false" />
-                <element signature="e#31571#32833#0#PHP" expanded="false" />
-                <element signature="n#arrayToXml#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#32963#33226#0#PHP" expanded="false" />
-                <element signature="e#33008#33216#0#PHP" expanded="false" />
-                <element signature="e#33115#33216#0#PHP" expanded="false" />
-                <element signature="n#doPageGetrange#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#33517#33878#0#PHP" expanded="false" />
-                <element signature="e#33702#33878#0#PHP" expanded="false" />
-                <element signature="n#doPageGetoneshangjia#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#34217#34333#0#PHP" expanded="false" />
-                <element signature="e#34389#34872#0#PHP" expanded="false" />
-                <element signature="e#34493#34872#0#PHP" expanded="false" />
-                <element signature="n#doPageGetshangjia#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#35174#38015#0#PHP" expanded="false" />
-                <element signature="e#35426#35523#0#PHP" expanded="false" />
-                <element signature="e#35589#36622#0#PHP" expanded="false" />
-                <element signature="e#35707#36622#0#PHP" expanded="false" />
-                <element signature="e#35730#36565#0#PHP" expanded="false" />
-                <element signature="e#35775#36134#0#PHP" expanded="false" />
-                <element signature="e#36200#36565#0#PHP" expanded="false" />
-                <element signature="e#36634#38015#0#PHP" expanded="false" />
-                <element signature="e#36825#36922#0#PHP" expanded="false" />
-                <element signature="e#37021#38005#0#PHP" expanded="false" />
-                <element signature="e#37137#38005#0#PHP" expanded="false" />
-                <element signature="e#37160#37948#0#PHP" expanded="false" />
-                <element signature="e#37205#37564#0#PHP" expanded="false" />
-                <element signature="e#37630#37948#0#PHP" expanded="false" />
-                <element signature="n#doPageMap#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#38413#38501#0#PHP" expanded="false" />
-                <element signature="e#38556#38642#0#PHP" expanded="false" />
-                <element signature="n#getDistance#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="n#cut_str#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#39568#40728#0#PHP" expanded="false" />
-                <element signature="e#40056#40728#0#PHP" expanded="false" />
-                <element signature="e#40209#40629#0#PHP" expanded="false" />
-                <element signature="e#40260#40554#0#PHP" expanded="false" />
-                <element signature="e#40327#40536#0#PHP" expanded="false" />
-                <element signature="e#40449#40536#0#PHP" expanded="false" />
-                <element signature="n#get_web#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#40933#41093#0#PHP" expanded="false" />
-                <element signature="e#41102#41240#0#PHP" expanded="false" />
-                <element signature="e#41250#41343#0#PHP" expanded="false" />
-                <element signature="e#41353#41564#0#PHP" expanded="false" />
-                <element signature="e#41394#41491#0#PHP" expanded="false" />
-                <element signature="e#41781#41916#0#PHP" expanded="false" />
-                <element signature="e#41980#42029#0#PHP" expanded="false" />
-                <element signature="n#create_sig#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#42295#42349#0#PHP" expanded="false" />
-                <element signature="n#json2array#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="n#doPageCheckSignature#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#43064#43178#0#PHP" expanded="false" />
-                <element signature="e#43138#43178#0#PHP" expanded="false" />
-                <element signature="n#get_php_file#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="n#set_php_file#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#43509#43633#0#PHP" expanded="false" />
-                <element signature="n#getOpendId#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#44010#44042#0#PHP" expanded="false" />
-                <element signature="n#getAccessToken#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="n#getSession_key#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
                 <element signature="n#decodephone#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-                <element signature="e#44989#45088#0#PHP" expanded="false" />
-                <element signature="e#45046#45088#0#PHP" expanded="false" />
-                <marker date="1542292780374" expanded="true" signature="343:424" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="1185:1272" ph="select * fro... ${tablename($configtable)}" />
-                <marker date="1542292780374" expanded="true" signature="3593:3674" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="4280:4344" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="5013:5098" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="5761:5847" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="6405:6504" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="8961:9042" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="16643:16732" ph="select * fro... ${tablename(&quot;jiaju_config&quot;)}" />
-                <marker date="1542292780374" expanded="true" signature="19947:20080" ph="select * fro... ${tablename(&quot;jiaju_order&quot;)}" />
-                <marker date="1542292780374" expanded="true" signature="20704:20820" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
-                <marker date="1542292780374" expanded="true" signature="20932:21048" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
-                <marker date="1542292780374" expanded="true" signature="21161:21277" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
-                <marker date="1542292780374" expanded="true" signature="21902:21966" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="22496:22560" ph="SELECT * FRO... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="23177:23241" ph="SELECT * FRO... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="23911:23992" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="24468:24575" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="33434:33448" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="34094:34196" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="35241:35343" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="36684:36800" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542292780374" expanded="true" signature="38310:38391" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="343:424" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="1185:1272" ph="select * fro... ${tablename($configtable)}" />
+                <marker date="1542332868913" expanded="true" signature="3593:3674" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="4280:4344" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="5013:5098" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="5761:5847" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="6405:6504" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="8961:9042" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="16643:16732" ph="select * fro... ${tablename(&quot;jiaju_config&quot;)}" />
+                <marker date="1542332868913" expanded="true" signature="19947:20080" ph="select * fro... ${tablename(&quot;jiaju_order&quot;)}" />
+                <marker date="1542332868913" expanded="true" signature="20704:20820" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
+                <marker date="1542332868913" expanded="true" signature="20932:21048" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
+                <marker date="1542332868913" expanded="true" signature="21161:21277" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
+                <marker date="1542332868913" expanded="true" signature="21902:21966" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="22496:22560" ph="SELECT * FRO... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="23177:23241" ph="SELECT * FRO... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="23911:23992" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="24468:24575" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="33434:33448" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="34094:34196" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="35241:35343" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="36684:36800" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542332868913" expanded="true" signature="38310:38391" ph="select * fro... ${tablename($table)}" />
               </folding>
             </state>
           </provider>
@@ -303,6 +156,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -319,8 +174,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,26 +210,27 @@
       <updated>1542253464111</updated>
       <workItem from="1542253465460" duration="15281000" />
       <workItem from="1542289625140" duration="3524000" />
+      <workItem from="1542333032113" duration="52000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18805000" />
+    <option name="totallyTimeSpent" value="18857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="10" width="1665" height="871" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16636309" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1682243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -399,6 +253,89 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wxapp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#doPageTest#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
+            <element signature="e#446#534#0#PHP" expanded="false" />
+            <element signature="e#594#682#0#PHP" expanded="false" />
+            <element signature="n#doPageGetphone#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
+            <element signature="e#1294#1382#0#PHP" expanded="false" />
+            <element signature="e#1442#1530#0#PHP" expanded="false" />
+            <element signature="n#doPageWordtovodio#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
+            <element signature="e#2126#2183#0#PHP" expanded="false" />
+            <element signature="e#2433#2587#0#PHP" expanded="false" />
+            <element signature="e#2468#2586#0#PHP" expanded="false" />
+            <element signature="e#2661#3114#0#PHP" expanded="false" />
+            <element signature="e#2993#3114#0#PHP" expanded="false" />
+            <element signature="n#doPageSendSms#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
+            <element signature="n#doPageSiteinfo#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
+            <element signature="e#3696#3784#0#PHP" expanded="false" />
+            <element signature="e#3842#4000#0#PHP" expanded="false" />
+            <element signature="e#3929#4000#0#PHP" expanded="false" />
+            <element signature="n#doPageGetad#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
+            <element signature="e#4365#4423#0#PHP" expanded="false" />
+            <element signature="e#4480#4819#0#PHP" expanded="false" />
+            <element signature="e#4580#4819#0#PHP" expanded="false" />
+            <element signature="e#4599#4700#0#PHP" expanded="false" />
+            <element signature="n#doPageGettype#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
+            <element signature="e#5119#5177#0#PHP" expanded="false" />
+            <element signature="e#5234#5569#0#PHP" expanded="false" />
+            <element signature="e#5334#5569#0#PHP" expanded="false" />
+            <element signature="e#5353#5450#0#PHP" expanded="false" />
+            <element signature="n#doPageGethot#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
+            <element signature="e#5868#5926#0#PHP" expanded="false" />
+            <element signature="e#5983#6208#0#PHP" expanded="false" />
+            <element signature="e#6083#6208#0#PHP" expanded="false" />
+            <element signature="n#doPageGetonehot#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
+            <element signature="e#6525#6614#0#PHP" expanded="false" />
+            <element signature="e#6668#6893#0#PHP" expanded="false" />
+            <element signature="e#6768#6893#0#PHP" expanded="false" />
+            <element signature="n#doPageAllType#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
+            <element signature="e#7173#7659#0#PHP" expanded="false" />
+            <element signature="e#7212#7490#0#PHP" expanded="false" />
+            <element signature="e#7349#7490#0#PHP" expanded="false" />
+            <element signature="e#7503#7600#0#PHP" expanded="false" />
+            <element signature="n#doPageGetservice#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
+            <element signature="n#doPagedoLogin#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
+            <element signature="e#9064#9152#0#PHP" expanded="false" />
+            <element signature="e#9212#9300#0#PHP" expanded="false" />
+            <element signature="e#9423#10284#0#PHP" expanded="false" />
+            <element signature="e#9567#10089#0#PHP" expanded="false" />
+            <element signature="e#9660#9935#0#PHP" expanded="false" />
+            <element signature="e#9824#9935#0#PHP" expanded="false" />
+            <element signature="e#9949#10089#0#PHP" expanded="false" />
+            <element signature="e#10100#10284#0#PHP" expanded="false" />
+            <element signature="n#decodephone#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
+            <marker date="1542332868913" expanded="true" signature="343:424" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="1185:1272" ph="select * fro... ${tablename($configtable)}" />
+            <marker date="1542332868913" expanded="true" signature="3593:3674" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="4280:4344" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="5013:5098" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="5761:5847" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="6405:6504" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="8961:9042" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="16643:16732" ph="select * fro... ${tablename(&quot;jiaju_config&quot;)}" />
+            <marker date="1542332868913" expanded="true" signature="19947:20080" ph="select * fro... ${tablename(&quot;jiaju_order&quot;)}" />
+            <marker date="1542332868913" expanded="true" signature="20704:20820" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
+            <marker date="1542332868913" expanded="true" signature="20932:21048" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
+            <marker date="1542332868913" expanded="true" signature="21161:21277" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
+            <marker date="1542332868913" expanded="true" signature="21902:21966" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="22496:22560" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="23177:23241" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="23911:23992" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="24468:24575" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="33434:33448" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="34094:34196" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="35241:35343" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="36684:36800" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="38310:38391" ph="select * fro... ${tablename($table)}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/site.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -638,34 +575,6 @@
             <element signature="e#39388#39486#0#PHP" expanded="false" />
             <element signature="e#39507#39602#0#PHP" expanded="false" />
             <element signature="e#39683#39829#0#PHP" expanded="false" />
-            <marker date="1542291099229" expanded="false" signature="327:408" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="1190:1254" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="1980:2044" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="2850:2974" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="3133:3204" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="4482:4560" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="6023:6101" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="6993:7191" ph="select a.*,b... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="7350:7421" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="8203:8259" ph="..." />
-            <marker date="1542291099229" expanded="false" signature="10248:10370" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="10529:10600" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="12638:12762" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="12921:12992" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="15053:15177" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="15336:15407" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="16827:16904" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="18563:18640" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="19494:19618" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="19777:19848" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="22189:22266" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="25018:25095" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="26039:26175" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="26334:26405" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="26768:26888" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="27086:27157" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="28358:28438" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="29328:29408" ph="select * fro... ${tablename($table)}" />
           </folding>
         </state>
       </provider>
@@ -723,6 +632,7 @@
             <element signature="e#7212#7490#0#PHP" expanded="false" />
             <element signature="e#7349#7490#0#PHP" expanded="false" />
             <element signature="e#7503#7600#0#PHP" expanded="false" />
+            <element signature="n#doPageGetservice#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
             <element signature="n#doPagedoLogin#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
             <element signature="e#9064#9152#0#PHP" expanded="false" />
             <element signature="e#9212#9300#0#PHP" expanded="false" />
@@ -732,153 +642,30 @@
             <element signature="e#9824#9935#0#PHP" expanded="false" />
             <element signature="e#9949#10089#0#PHP" expanded="false" />
             <element signature="e#10100#10284#0#PHP" expanded="false" />
-            <element signature="n#doPageGetuserinfo#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#10509#10675#0#PHP" expanded="false" />
-            <element signature="e#10594#10675#0#PHP" expanded="false" />
-            <element signature="n#doPageSaveadd#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#11412#13515#0#PHP" expanded="false" />
-            <element signature="e#11437#11626#0#PHP" expanded="false" />
-            <element signature="e#11639#12077#0#PHP" expanded="false" />
-            <element signature="e#11700#11977#0#PHP" expanded="false" />
-            <element signature="e#11907#11977#0#PHP" expanded="false" />
-            <element signature="e#11991#12077#0#PHP" expanded="false" />
-            <element signature="e#12183#12481#0#PHP" expanded="false" />
-            <element signature="e#12283#12481#0#PHP" expanded="false" />
-            <element signature="e#12532#13515#0#PHP" expanded="false" />
-            <element signature="e#12675#13113#0#PHP" expanded="false" />
-            <element signature="e#12736#13013#0#PHP" expanded="false" />
-            <element signature="e#12943#13013#0#PHP" expanded="false" />
-            <element signature="e#13027#13113#0#PHP" expanded="false" />
-            <element signature="e#13182#13468#0#PHP" expanded="false" />
-            <element signature="e#13276#13468#0#PHP" expanded="false" />
-            <element signature="n#doPageMyAddress#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#13742#13844#0#PHP" expanded="false" />
-            <element signature="n#doPagegetoneAdd#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#14057#14385#0#PHP" expanded="false" />
-            <element signature="e#14136#14385#0#PHP" expanded="false" />
-            <element signature="e#14238#14375#0#PHP" expanded="false" />
-            <element signature="n#doPageDelAdd#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#14730#14902#0#PHP" expanded="false" />
-            <element signature="e#14818#14902#0#PHP" expanded="false" />
-            <element signature="n#doPageAddFormId#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#15034#15336#0#PHP" expanded="false" />
-            <element signature="n#doPageSubmitOrder#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#16174#16497#0#PHP" expanded="false" />
-            <element signature="e#16414#16497#0#PHP" expanded="false" />
-            <element signature="n#getconfig#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#16754#16842#0#PHP" expanded="false" />
-            <element signature="e#16902#16990#0#PHP" expanded="false" />
-            <element signature="n#randNum#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#17135#17239#0#PHP" expanded="false" />
-            <element signature="n#sendweimsg#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="n#doPageUserOrder#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#19766#20390#0#PHP" expanded="false" />
-            <element signature="e#19923#20390#0#PHP" expanded="false" />
-            <element signature="e#20105#20241#0#PHP" expanded="false" />
-            <element signature="e#20399#20494#0#PHP" expanded="false" />
-            <element signature="n#doPageGetordercount#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#20687#20881#0#PHP" expanded="false" />
-            <element signature="e#20915#21109#0#PHP" expanded="false" />
-            <element signature="e#21144#21338#0#PHP" expanded="false" />
-            <element signature="n#doPageGetprob#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#21987#22045#0#PHP" expanded="false" />
-            <element signature="e#22102#22327#0#PHP" expanded="false" />
-            <element signature="e#22202#22327#0#PHP" expanded="false" />
-            <element signature="n#doPageGetabout#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#22723#23008#0#PHP" expanded="false" />
-            <element signature="e#22823#23008#0#PHP" expanded="false" />
-            <element signature="n#doPageGetxieyi#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#23404#23629#0#PHP" expanded="false" />
-            <element signature="e#23504#23629#0#PHP" expanded="false" />
-            <element signature="n#doPageCheckinfo#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#24014#24102#0#PHP" expanded="false" />
-            <element signature="e#24162#24250#0#PHP" expanded="false" />
-            <element signature="e#24424#25130#0#PHP" expanded="false" />
-            <element signature="e#24600#24703#0#PHP" expanded="false" />
-            <element signature="e#24766#25011#0#PHP" expanded="false" />
-            <element signature="e#24883#25011#0#PHP" expanded="false" />
-            <element signature="e#25023#25130#0#PHP" expanded="false" />
-            <element signature="n#doPagePostuploadimg#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#25617#25933#0#PHP" expanded="false" />
-            <element signature="e#26005#26302#0#PHP" expanded="false" />
-            <element signature="e#26311#26592#0#PHP" expanded="false" />
-            <element signature="e#26602#26692#0#PHP" expanded="false" />
-            <element signature="e#26924#27183#0#PHP" expanded="false" />
-            <element signature="e#27192#27472#0#PHP" expanded="false" />
-            <element signature="n#doPagePostshenqing#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#28972#29013#0#PHP" expanded="false" />
-            <element signature="e#29331#29365#0#PHP" expanded="false" />
-            <element signature="e#29964#32833#0#PHP" expanded="false" />
-            <element signature="e#30145#30179#0#PHP" expanded="false" />
-            <element signature="e#30337#32833#0#PHP" expanded="false" />
-            <element signature="e#30515#32833#0#PHP" expanded="false" />
-            <element signature="e#30691#32833#0#PHP" expanded="false" />
-            <element signature="e#30863#32833#0#PHP" expanded="false" />
-            <element signature="e#31034#32833#0#PHP" expanded="false" />
-            <element signature="e#31211#32833#0#PHP" expanded="false" />
-            <element signature="e#31389#32833#0#PHP" expanded="false" />
-            <element signature="e#31571#32833#0#PHP" expanded="false" />
-            <element signature="n#arrayToXml#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#32963#33226#0#PHP" expanded="false" />
-            <element signature="e#33008#33216#0#PHP" expanded="false" />
-            <element signature="e#33115#33216#0#PHP" expanded="false" />
-            <element signature="n#doPageGetrange#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#33517#33878#0#PHP" expanded="false" />
-            <element signature="e#33702#33878#0#PHP" expanded="false" />
-            <element signature="n#doPageGetoneshangjia#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#34217#34333#0#PHP" expanded="false" />
-            <element signature="e#34389#34872#0#PHP" expanded="false" />
-            <element signature="e#34493#34872#0#PHP" expanded="false" />
-            <element signature="n#doPageGetshangjia#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#35174#38015#0#PHP" expanded="false" />
-            <element signature="e#35426#35523#0#PHP" expanded="false" />
-            <element signature="e#35589#36622#0#PHP" expanded="false" />
-            <element signature="e#35707#36622#0#PHP" expanded="false" />
-            <element signature="e#35730#36565#0#PHP" expanded="false" />
-            <element signature="e#35775#36134#0#PHP" expanded="false" />
-            <element signature="e#36200#36565#0#PHP" expanded="false" />
-            <element signature="e#36634#38015#0#PHP" expanded="false" />
-            <element signature="e#36825#36922#0#PHP" expanded="false" />
-            <element signature="e#37021#38005#0#PHP" expanded="false" />
-            <element signature="e#37137#38005#0#PHP" expanded="false" />
-            <element signature="e#37160#37948#0#PHP" expanded="false" />
-            <element signature="e#37205#37564#0#PHP" expanded="false" />
-            <element signature="e#37630#37948#0#PHP" expanded="false" />
-            <element signature="n#doPageMap#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#38413#38501#0#PHP" expanded="false" />
-            <element signature="e#38556#38642#0#PHP" expanded="false" />
-            <element signature="n#getDistance#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="n#cut_str#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#39568#40728#0#PHP" expanded="false" />
-            <element signature="e#40056#40728#0#PHP" expanded="false" />
-            <element signature="e#40209#40629#0#PHP" expanded="false" />
-            <element signature="e#40260#40554#0#PHP" expanded="false" />
-            <element signature="e#40327#40536#0#PHP" expanded="false" />
-            <element signature="e#40449#40536#0#PHP" expanded="false" />
-            <element signature="n#get_web#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#40933#41093#0#PHP" expanded="false" />
-            <element signature="e#41102#41240#0#PHP" expanded="false" />
-            <element signature="e#41250#41343#0#PHP" expanded="false" />
-            <element signature="e#41353#41564#0#PHP" expanded="false" />
-            <element signature="e#41394#41491#0#PHP" expanded="false" />
-            <element signature="e#41781#41916#0#PHP" expanded="false" />
-            <element signature="e#41980#42029#0#PHP" expanded="false" />
-            <element signature="n#create_sig#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#42295#42349#0#PHP" expanded="false" />
-            <element signature="n#json2array#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="n#doPageCheckSignature#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#43064#43178#0#PHP" expanded="false" />
-            <element signature="e#43138#43178#0#PHP" expanded="false" />
-            <element signature="n#get_php_file#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="n#set_php_file#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#43509#43633#0#PHP" expanded="false" />
-            <element signature="n#getOpendId#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#44010#44042#0#PHP" expanded="false" />
-            <element signature="n#getAccessToken#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="n#getSession_key#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
             <element signature="n#decodephone#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#44989#45088#0#PHP" expanded="false" />
-            <element signature="e#45046#45088#0#PHP" expanded="false" />
+            <marker date="1542332868913" expanded="true" signature="343:424" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="1185:1272" ph="select * fro... ${tablename($configtable)}" />
+            <marker date="1542332868913" expanded="true" signature="3593:3674" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="4280:4344" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="5013:5098" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="5761:5847" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="6405:6504" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="8961:9042" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="16643:16732" ph="select * fro... ${tablename(&quot;jiaju_config&quot;)}" />
+            <marker date="1542332868913" expanded="true" signature="19947:20080" ph="select * fro... ${tablename(&quot;jiaju_order&quot;)}" />
+            <marker date="1542332868913" expanded="true" signature="20704:20820" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
+            <marker date="1542332868913" expanded="true" signature="20932:21048" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
+            <marker date="1542332868913" expanded="true" signature="21161:21277" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
+            <marker date="1542332868913" expanded="true" signature="21902:21966" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="22496:22560" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="23177:23241" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="23911:23992" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="24468:24575" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="33434:33448" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="34094:34196" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="35241:35343" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="36684:36800" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="38310:38391" ph="select * fro... ${tablename($table)}" />
           </folding>
         </state>
       </provider>
@@ -952,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="22" column="18" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="22" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="22" column="18" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="22" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,13 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
           <caret line="53" column="26" lean-forward="false" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#img#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#td#3;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1233,42 +1011,14 @@
             <element signature="e#39388#39486#0#PHP" expanded="false" />
             <element signature="e#39507#39602#0#PHP" expanded="false" />
             <element signature="e#39683#39829#0#PHP" expanded="false" />
-            <marker date="1542291099229" expanded="false" signature="327:408" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="1190:1254" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="1980:2044" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="2850:2974" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="3133:3204" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="4482:4560" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="6023:6101" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="6993:7191" ph="select a.*,b... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="7350:7421" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="8203:8259" ph="..." />
-            <marker date="1542291099229" expanded="false" signature="10248:10370" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="10529:10600" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="12638:12762" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="12921:12992" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="15053:15177" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="15336:15407" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="16827:16904" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="18563:18640" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="19494:19618" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="19777:19848" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="22189:22266" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="25018:25095" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="26039:26175" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="26334:26405" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="26768:26888" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="27086:27157" ph="select count... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="28358:28438" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542291099229" expanded="false" signature="29328:29408" ph="select * fro... ${tablename($table)}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wxapp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="612" column="43" lean-forward="false" selection-start-line="612" selection-start-column="43" selection-end-line="612" selection-end-column="43" />
+        <state relative-caret-position="86">
+          <caret line="612" column="22" lean-forward="false" selection-start-line="612" selection-start-column="22" selection-end-line="612" selection-end-column="22" />
           <folding>
             <element signature="n#doPageTest#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
             <element signature="e#446#534#0#PHP" expanded="false" />
@@ -1320,177 +1070,30 @@
             <element signature="e#9824#9935#0#PHP" expanded="false" />
             <element signature="e#9949#10089#0#PHP" expanded="false" />
             <element signature="e#10100#10284#0#PHP" expanded="false" />
-            <element signature="n#doPageGetuserinfo#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#10509#10675#0#PHP" expanded="false" />
-            <element signature="e#10594#10675#0#PHP" expanded="false" />
-            <element signature="n#doPageSaveadd#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#11412#13515#0#PHP" expanded="false" />
-            <element signature="e#11437#11626#0#PHP" expanded="false" />
-            <element signature="e#11639#12077#0#PHP" expanded="false" />
-            <element signature="e#11700#11977#0#PHP" expanded="false" />
-            <element signature="e#11907#11977#0#PHP" expanded="false" />
-            <element signature="e#11991#12077#0#PHP" expanded="false" />
-            <element signature="e#12183#12481#0#PHP" expanded="false" />
-            <element signature="e#12283#12481#0#PHP" expanded="false" />
-            <element signature="e#12532#13515#0#PHP" expanded="false" />
-            <element signature="e#12675#13113#0#PHP" expanded="false" />
-            <element signature="e#12736#13013#0#PHP" expanded="false" />
-            <element signature="e#12943#13013#0#PHP" expanded="false" />
-            <element signature="e#13027#13113#0#PHP" expanded="false" />
-            <element signature="e#13182#13468#0#PHP" expanded="false" />
-            <element signature="e#13276#13468#0#PHP" expanded="false" />
-            <element signature="n#doPageMyAddress#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#13742#13844#0#PHP" expanded="false" />
-            <element signature="n#doPagegetoneAdd#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#14057#14385#0#PHP" expanded="false" />
-            <element signature="e#14136#14385#0#PHP" expanded="false" />
-            <element signature="e#14238#14375#0#PHP" expanded="false" />
-            <element signature="n#doPageDelAdd#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#14730#14902#0#PHP" expanded="false" />
-            <element signature="e#14818#14902#0#PHP" expanded="false" />
-            <element signature="n#doPageAddFormId#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#15034#15336#0#PHP" expanded="false" />
-            <element signature="n#doPageSubmitOrder#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#16174#16497#0#PHP" expanded="false" />
-            <element signature="e#16414#16497#0#PHP" expanded="false" />
-            <element signature="n#getconfig#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#16754#16842#0#PHP" expanded="false" />
-            <element signature="e#16902#16990#0#PHP" expanded="false" />
-            <element signature="n#randNum#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#17135#17239#0#PHP" expanded="false" />
-            <element signature="n#sendweimsg#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="n#doPageUserOrder#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#19766#20390#0#PHP" expanded="false" />
-            <element signature="e#19923#20390#0#PHP" expanded="false" />
-            <element signature="e#20105#20241#0#PHP" expanded="false" />
-            <element signature="e#20399#20494#0#PHP" expanded="false" />
-            <element signature="n#doPageGetordercount#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#20687#20881#0#PHP" expanded="false" />
-            <element signature="e#20915#21109#0#PHP" expanded="false" />
-            <element signature="e#21144#21338#0#PHP" expanded="false" />
-            <element signature="n#doPagegetOrderDetail#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="n#doPageGetprob#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#21987#22045#0#PHP" expanded="false" />
-            <element signature="e#22102#22327#0#PHP" expanded="false" />
-            <element signature="e#22202#22327#0#PHP" expanded="false" />
-            <element signature="n#doPageGetabout#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#22723#23008#0#PHP" expanded="false" />
-            <element signature="e#22823#23008#0#PHP" expanded="false" />
-            <element signature="n#doPageGetxieyi#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#23404#23629#0#PHP" expanded="false" />
-            <element signature="e#23504#23629#0#PHP" expanded="false" />
-            <element signature="n#doPageCheckinfo#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#24014#24102#0#PHP" expanded="false" />
-            <element signature="e#24162#24250#0#PHP" expanded="false" />
-            <element signature="e#24424#25130#0#PHP" expanded="false" />
-            <element signature="e#24600#24703#0#PHP" expanded="false" />
-            <element signature="e#24766#25011#0#PHP" expanded="false" />
-            <element signature="e#24883#25011#0#PHP" expanded="false" />
-            <element signature="e#25023#25130#0#PHP" expanded="false" />
-            <element signature="n#doPagePostuploadimg#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#25617#25933#0#PHP" expanded="false" />
-            <element signature="e#26005#26302#0#PHP" expanded="false" />
-            <element signature="e#26311#26592#0#PHP" expanded="false" />
-            <element signature="e#26602#26692#0#PHP" expanded="false" />
-            <element signature="e#26924#27183#0#PHP" expanded="false" />
-            <element signature="e#27192#27472#0#PHP" expanded="false" />
-            <element signature="n#doPagePostshenqing#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#28972#29013#0#PHP" expanded="false" />
-            <element signature="e#29331#29365#0#PHP" expanded="false" />
-            <element signature="e#29964#32833#0#PHP" expanded="false" />
-            <element signature="e#30145#30179#0#PHP" expanded="false" />
-            <element signature="e#30337#32833#0#PHP" expanded="false" />
-            <element signature="e#30515#32833#0#PHP" expanded="false" />
-            <element signature="e#30691#32833#0#PHP" expanded="false" />
-            <element signature="e#30863#32833#0#PHP" expanded="false" />
-            <element signature="e#31034#32833#0#PHP" expanded="false" />
-            <element signature="e#31211#32833#0#PHP" expanded="false" />
-            <element signature="e#31389#32833#0#PHP" expanded="false" />
-            <element signature="e#31571#32833#0#PHP" expanded="false" />
-            <element signature="n#arrayToXml#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#32963#33226#0#PHP" expanded="false" />
-            <element signature="e#33008#33216#0#PHP" expanded="false" />
-            <element signature="e#33115#33216#0#PHP" expanded="false" />
-            <element signature="n#doPageGetrange#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#33517#33878#0#PHP" expanded="false" />
-            <element signature="e#33702#33878#0#PHP" expanded="false" />
-            <element signature="n#doPageGetoneshangjia#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#34217#34333#0#PHP" expanded="false" />
-            <element signature="e#34389#34872#0#PHP" expanded="false" />
-            <element signature="e#34493#34872#0#PHP" expanded="false" />
-            <element signature="n#doPageGetshangjia#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#35174#38015#0#PHP" expanded="false" />
-            <element signature="e#35426#35523#0#PHP" expanded="false" />
-            <element signature="e#35589#36622#0#PHP" expanded="false" />
-            <element signature="e#35707#36622#0#PHP" expanded="false" />
-            <element signature="e#35730#36565#0#PHP" expanded="false" />
-            <element signature="e#35775#36134#0#PHP" expanded="false" />
-            <element signature="e#36200#36565#0#PHP" expanded="false" />
-            <element signature="e#36634#38015#0#PHP" expanded="false" />
-            <element signature="e#36825#36922#0#PHP" expanded="false" />
-            <element signature="e#37021#38005#0#PHP" expanded="false" />
-            <element signature="e#37137#38005#0#PHP" expanded="false" />
-            <element signature="e#37160#37948#0#PHP" expanded="false" />
-            <element signature="e#37205#37564#0#PHP" expanded="false" />
-            <element signature="e#37630#37948#0#PHP" expanded="false" />
-            <element signature="n#doPageMap#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#38413#38501#0#PHP" expanded="false" />
-            <element signature="e#38556#38642#0#PHP" expanded="false" />
-            <element signature="n#getDistance#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="n#cut_str#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#39568#40728#0#PHP" expanded="false" />
-            <element signature="e#40056#40728#0#PHP" expanded="false" />
-            <element signature="e#40209#40629#0#PHP" expanded="false" />
-            <element signature="e#40260#40554#0#PHP" expanded="false" />
-            <element signature="e#40327#40536#0#PHP" expanded="false" />
-            <element signature="e#40449#40536#0#PHP" expanded="false" />
-            <element signature="n#get_web#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#40933#41093#0#PHP" expanded="false" />
-            <element signature="e#41102#41240#0#PHP" expanded="false" />
-            <element signature="e#41250#41343#0#PHP" expanded="false" />
-            <element signature="e#41353#41564#0#PHP" expanded="false" />
-            <element signature="e#41394#41491#0#PHP" expanded="false" />
-            <element signature="e#41781#41916#0#PHP" expanded="false" />
-            <element signature="e#41980#42029#0#PHP" expanded="false" />
-            <element signature="n#create_sig#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#42295#42349#0#PHP" expanded="false" />
-            <element signature="n#json2array#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="n#doPageCheckSignature#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#43064#43178#0#PHP" expanded="false" />
-            <element signature="e#43138#43178#0#PHP" expanded="false" />
-            <element signature="n#get_php_file#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="n#set_php_file#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#43509#43633#0#PHP" expanded="false" />
-            <element signature="n#getOpendId#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#44010#44042#0#PHP" expanded="false" />
-            <element signature="n#getAccessToken#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="n#getSession_key#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
             <element signature="n#decodephone#0;n#jiajuModuleWxapp#0;n#!!top" expanded="false" />
-            <element signature="e#44989#45088#0#PHP" expanded="false" />
-            <element signature="e#45046#45088#0#PHP" expanded="false" />
-            <marker date="1542292780374" expanded="true" signature="343:424" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="1185:1272" ph="select * fro... ${tablename($configtable)}" />
-            <marker date="1542292780374" expanded="true" signature="3593:3674" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="4280:4344" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="5013:5098" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="5761:5847" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="6405:6504" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="8961:9042" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="16643:16732" ph="select * fro... ${tablename(&quot;jiaju_config&quot;)}" />
-            <marker date="1542292780374" expanded="true" signature="19947:20080" ph="select * fro... ${tablename(&quot;jiaju_order&quot;)}" />
-            <marker date="1542292780374" expanded="true" signature="20704:20820" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
-            <marker date="1542292780374" expanded="true" signature="20932:21048" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
-            <marker date="1542292780374" expanded="true" signature="21161:21277" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
-            <marker date="1542292780374" expanded="true" signature="21902:21966" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="22496:22560" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="23177:23241" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="23911:23992" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="24468:24575" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="33434:33448" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="34094:34196" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="35241:35343" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="36684:36800" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542292780374" expanded="true" signature="38310:38391" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="343:424" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="1185:1272" ph="select * fro... ${tablename($configtable)}" />
+            <marker date="1542332868913" expanded="true" signature="3593:3674" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="4280:4344" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="5013:5098" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="5761:5847" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="6405:6504" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="8961:9042" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="16643:16732" ph="select * fro... ${tablename(&quot;jiaju_config&quot;)}" />
+            <marker date="1542332868913" expanded="true" signature="19947:20080" ph="select * fro... ${tablename(&quot;jiaju_order&quot;)}" />
+            <marker date="1542332868913" expanded="true" signature="20704:20820" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
+            <marker date="1542332868913" expanded="true" signature="20932:21048" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
+            <marker date="1542332868913" expanded="true" signature="21161:21277" ph="SELECT COUNT... ${tablename('jiaju_order')}" />
+            <marker date="1542332868913" expanded="true" signature="21902:21966" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="22496:22560" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="23177:23241" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="23911:23992" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="24468:24575" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="33434:33448" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="34094:34196" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="35241:35343" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="36684:36800" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542332868913" expanded="true" signature="38310:38391" ph="select * fro... ${tablename($table)}" />
           </folding>
         </state>
       </provider>
