@@ -14,7 +14,7 @@
       <file leaf-file-name="site.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
+            <state relative-caret-position="1378">
               <caret line="731" column="48" lean-forward="false" selection-start-line="731" selection-start-column="48" selection-end-line="731" selection-end-column="48" />
               <folding>
                 <element signature="e#6#83#0#PHP" expanded="false" />
@@ -266,36 +266,36 @@
                 <element signature="e#43695#43793#0#PHP" expanded="false" />
                 <element signature="e#43814#43909#0#PHP" expanded="false" />
                 <element signature="e#43990#44136#0#PHP" expanded="false" />
-                <marker date="1542418609159" expanded="false" signature="327:408" ph="SELECT * FRO... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="1190:1254" ph="SELECT * FRO... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="1980:2044" ph="SELECT * FRO... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="2850:2974" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="3133:3204" ph="select count... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="4482:4560" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="6023:6101" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="6993:7191" ph="select a.*,b... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="7350:7421" ph="select count... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="10248:10370" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="10529:10600" ph="select count... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="12638:12762" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="12921:12992" ph="select count... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="15053:15177" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="15336:15407" ph="select count... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="16827:16904" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="18563:18640" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="19494:19618" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="19777:19848" ph="select count... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="22189:22266" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="25018:25095" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="26039:26175" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="26334:26405" ph="select count... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="26849:26985" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="27144:27215" ph="select count... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="27638:27715" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="29466:29586" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="29784:29855" ph="select count... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="31056:31136" ph="select * fro... ${tablename($table)}" />
-                <marker date="1542418609159" expanded="false" signature="32026:32106" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="327:408" ph="SELECT * FRO... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="1190:1254" ph="SELECT * FRO... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="1980:2044" ph="SELECT * FRO... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="2850:2974" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="3133:3204" ph="select count... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="4482:4560" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="6023:6101" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="6993:7191" ph="select a.*,b... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="7350:7421" ph="select count... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="10248:10370" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="10529:10600" ph="select count... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="12638:12762" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="12921:12992" ph="select count... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="15053:15177" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="15336:15407" ph="select count... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="16827:16904" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="18563:18640" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="19494:19618" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="19777:19848" ph="select count... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="22189:22266" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="25018:25095" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="26039:26175" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="26334:26405" ph="select count... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="26849:26985" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="27144:27215" ph="select count... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="27638:27715" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="29466:29586" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="29784:29855" ph="select count... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="31056:31136" ph="select * fro... ${tablename($table)}" />
+                <marker date="1542419275024" expanded="false" signature="32026:32106" ph="select * fro... ${tablename($table)}" />
               </folding>
             </state>
           </provider>
@@ -465,7 +465,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38771000" />
+    <option name="totallyTimeSpent" value="39327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="150" y="88" width="1724" height="871" extended-state="0" />
@@ -830,36 +830,36 @@
             <element signature="e#43695#43793#0#PHP" expanded="false" />
             <element signature="e#43814#43909#0#PHP" expanded="false" />
             <element signature="e#43990#44136#0#PHP" expanded="false" />
-            <marker date="1542418609159" expanded="false" signature="327:408" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="1190:1254" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="1980:2044" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="2850:2974" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="3133:3204" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="4482:4560" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="6023:6101" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="6993:7191" ph="select a.*,b... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="7350:7421" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="10248:10370" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="10529:10600" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="12638:12762" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="12921:12992" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="15053:15177" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="15336:15407" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="16827:16904" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="18563:18640" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="19494:19618" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="19777:19848" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="22189:22266" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="25018:25095" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26039:26175" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26334:26405" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26849:26985" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="27144:27215" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="27638:27715" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="29466:29586" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="29784:29855" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="31056:31136" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="32026:32106" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="327:408" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="1190:1254" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="1980:2044" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="2850:2974" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="3133:3204" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="4482:4560" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="6023:6101" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="6993:7191" ph="select a.*,b... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="7350:7421" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="10248:10370" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="10529:10600" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="12638:12762" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="12921:12992" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="15053:15177" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="15336:15407" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="16827:16904" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="18563:18640" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="19494:19618" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="19777:19848" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="22189:22266" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="25018:25095" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26039:26175" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26334:26405" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26849:26985" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="27144:27215" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="27638:27715" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="29466:29586" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="29784:29855" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="31056:31136" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="32026:32106" ph="select * fro... ${tablename($table)}" />
           </folding>
         </state>
       </provider>
@@ -1128,36 +1128,36 @@
             <element signature="e#43695#43793#0#PHP" expanded="false" />
             <element signature="e#43814#43909#0#PHP" expanded="false" />
             <element signature="e#43990#44136#0#PHP" expanded="false" />
-            <marker date="1542418609159" expanded="false" signature="327:408" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="1190:1254" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="1980:2044" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="2850:2974" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="3133:3204" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="4482:4560" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="6023:6101" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="6993:7191" ph="select a.*,b... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="7350:7421" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="10248:10370" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="10529:10600" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="12638:12762" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="12921:12992" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="15053:15177" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="15336:15407" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="16827:16904" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="18563:18640" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="19494:19618" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="19777:19848" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="22189:22266" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="25018:25095" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26039:26175" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26334:26405" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26849:26985" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="27144:27215" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="27638:27715" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="29466:29586" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="29784:29855" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="31056:31136" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="32026:32106" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="327:408" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="1190:1254" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="1980:2044" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="2850:2974" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="3133:3204" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="4482:4560" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="6023:6101" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="6993:7191" ph="select a.*,b... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="7350:7421" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="10248:10370" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="10529:10600" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="12638:12762" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="12921:12992" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="15053:15177" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="15336:15407" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="16827:16904" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="18563:18640" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="19494:19618" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="19777:19848" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="22189:22266" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="25018:25095" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26039:26175" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26334:26405" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26849:26985" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="27144:27215" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="27638:27715" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="29466:29586" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="29784:29855" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="31056:31136" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="32026:32106" ph="select * fro... ${tablename($table)}" />
           </folding>
         </state>
       </provider>
@@ -1510,36 +1510,36 @@
             <element signature="e#43695#43793#0#PHP" expanded="false" />
             <element signature="e#43814#43909#0#PHP" expanded="false" />
             <element signature="e#43990#44136#0#PHP" expanded="false" />
-            <marker date="1542418609159" expanded="false" signature="327:408" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="1190:1254" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="1980:2044" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="2850:2974" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="3133:3204" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="4482:4560" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="6023:6101" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="6993:7191" ph="select a.*,b... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="7350:7421" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="10248:10370" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="10529:10600" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="12638:12762" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="12921:12992" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="15053:15177" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="15336:15407" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="16827:16904" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="18563:18640" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="19494:19618" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="19777:19848" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="22189:22266" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="25018:25095" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26039:26175" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26334:26405" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26849:26985" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="27144:27215" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="27638:27715" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="29466:29586" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="29784:29855" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="31056:31136" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="32026:32106" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="327:408" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="1190:1254" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="1980:2044" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="2850:2974" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="3133:3204" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="4482:4560" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="6023:6101" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="6993:7191" ph="select a.*,b... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="7350:7421" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="10248:10370" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="10529:10600" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="12638:12762" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="12921:12992" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="15053:15177" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="15336:15407" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="16827:16904" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="18563:18640" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="19494:19618" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="19777:19848" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="22189:22266" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="25018:25095" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26039:26175" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26334:26405" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26849:26985" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="27144:27215" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="27638:27715" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="29466:29586" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="29784:29855" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="31056:31136" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="32026:32106" ph="select * fro... ${tablename($table)}" />
           </folding>
         </state>
       </provider>
@@ -1818,36 +1818,36 @@
             <element signature="e#43695#43793#0#PHP" expanded="false" />
             <element signature="e#43814#43909#0#PHP" expanded="false" />
             <element signature="e#43990#44136#0#PHP" expanded="false" />
-            <marker date="1542418609159" expanded="false" signature="327:408" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="1190:1254" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="1980:2044" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="2850:2974" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="3133:3204" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="4482:4560" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="6023:6101" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="6993:7191" ph="select a.*,b... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="7350:7421" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="10248:10370" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="10529:10600" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="12638:12762" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="12921:12992" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="15053:15177" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="15336:15407" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="16827:16904" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="18563:18640" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="19494:19618" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="19777:19848" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="22189:22266" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="25018:25095" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26039:26175" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26334:26405" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26849:26985" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="27144:27215" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="27638:27715" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="29466:29586" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="29784:29855" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="31056:31136" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="32026:32106" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="327:408" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="1190:1254" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="1980:2044" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="2850:2974" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="3133:3204" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="4482:4560" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="6023:6101" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="6993:7191" ph="select a.*,b... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="7350:7421" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="10248:10370" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="10529:10600" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="12638:12762" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="12921:12992" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="15053:15177" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="15336:15407" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="16827:16904" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="18563:18640" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="19494:19618" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="19777:19848" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="22189:22266" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="25018:25095" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26039:26175" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26334:26405" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26849:26985" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="27144:27215" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="27638:27715" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="29466:29586" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="29784:29855" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="31056:31136" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="32026:32106" ph="select * fro... ${tablename($table)}" />
           </folding>
         </state>
       </provider>
@@ -2011,7 +2011,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/site.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
+        <state relative-caret-position="1378">
           <caret line="731" column="48" lean-forward="false" selection-start-line="731" selection-start-column="48" selection-end-line="731" selection-end-column="48" />
           <folding>
             <element signature="e#6#83#0#PHP" expanded="false" />
@@ -2263,36 +2263,36 @@
             <element signature="e#43695#43793#0#PHP" expanded="false" />
             <element signature="e#43814#43909#0#PHP" expanded="false" />
             <element signature="e#43990#44136#0#PHP" expanded="false" />
-            <marker date="1542418609159" expanded="false" signature="327:408" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="1190:1254" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="1980:2044" ph="SELECT * FRO... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="2850:2974" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="3133:3204" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="4482:4560" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="6023:6101" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="6993:7191" ph="select a.*,b... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="7350:7421" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="10248:10370" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="10529:10600" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="12638:12762" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="12921:12992" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="15053:15177" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="15336:15407" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="16827:16904" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="18563:18640" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="19494:19618" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="19777:19848" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="22189:22266" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="25018:25095" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26039:26175" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26334:26405" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="26849:26985" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="27144:27215" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="27638:27715" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="29466:29586" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="29784:29855" ph="select count... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="31056:31136" ph="select * fro... ${tablename($table)}" />
-            <marker date="1542418609159" expanded="false" signature="32026:32106" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="327:408" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="1190:1254" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="1980:2044" ph="SELECT * FRO... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="2850:2974" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="3133:3204" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="4482:4560" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="6023:6101" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="6993:7191" ph="select a.*,b... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="7350:7421" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="10248:10370" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="10529:10600" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="12638:12762" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="12921:12992" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="15053:15177" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="15336:15407" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="16827:16904" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="18563:18640" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="19494:19618" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="19777:19848" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="22189:22266" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="25018:25095" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26039:26175" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26334:26405" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="26849:26985" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="27144:27215" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="27638:27715" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="29466:29586" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="29784:29855" ph="select count... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="31056:31136" ph="select * fro... ${tablename($table)}" />
+            <marker date="1542419275024" expanded="false" signature="32026:32106" ph="select * fro... ${tablename($table)}" />
           </folding>
         </state>
       </provider>
