@@ -1,10 +1,4 @@
 <?php
-/**
- * 金导旅游模块微站定义
- *
- * @author panshikj
- * @url http://www.zunyangkj.com
- */
 defined('IN_IA') or exit('Access Denied');
 
 class jiajuModuleSite extends WeModuleSite
@@ -791,6 +785,90 @@ class jiajuModuleSite extends WeModuleSite
 
         }
     }
+    //师傅列表
+    public function doWebShifulist(){
+        global $_W, $_GPC;
+        $table = "jiaju_shifu";
+        $pindex = max(1, intval($_GPC['page']));
+        $psize = 10;
+        $getkeyword=$_GPC['keywords'];
+        $where=" a.name LIKE '%".$getkeyword."%'";
+        $sql = "select a.*,b.name as sname from " . tablename($table)." a"." left join ". tablename("jiaju_sertype")." b" ." on a.type=b.sid  where a.uniacid=:uniacid and ".$where." order by a.addtime desc limit " . ($pindex - 1) * $psize . ',' . $psize;
+        $params = array(
+            ':uniacid' => $_W['uniacid'],
+        );
+
+        $result_list = pdo_fetchall($sql, $params);
+        $sql2 = "select count(*) from " . tablename($table) . " where `uniacid`=:uniacid";
+        $total = pdo_fetchcolumn($sql2, $params);
+        $pager = pagination($total, $pindex, $psize);
+        include $this->template("shifulist");
+    }
+    //师傅信息详细
+    public function doWebShifudetail()
+    {
+        global $_W, $_GPC;
+        $table = "jiaju_shifu";
+        $id = intval($_GPC['id']);
+        if ($id == "") {
+            message("参数错误", referer(), 'error');
+        } else {
+            $sql = "select * from " . tablename($table) . " where `uniacid`=:uniacid and `sfid`=:id";
+            $params = array(
+                ':uniacid' => $_W['uniacid'],
+                ':id' => $id
+            );
+            $result = pdo_fetch($sql, $params);
+            $typelist=pdo_getall('jiaju_sertype',array('uniacid'=>$_W['uniacid']));
+            if (empty($result)) {
+                message("信息不存在", referer(), 'error');
+            } else {
+                if ($_W['ispost']) {
+                    //通过
+                    $arr = array();
+                    $arr['uniacid'] = $_W['uniacid'];
+                    $arr['state'] = $_GPC['state'];
+                    $arr['type'] = $_GPC['pid'];
+                    $arr['grade'] = $_GPC['grade'];
+                    if ($_GPC['state']==3){
+                        if (empty($_GPC['resfu'])) {
+                            message('请填写拒绝理由', referer(), 'error');
+                        } else {
+                            $arr['resfu'] = $_GPC['resfu'];
+                            $arr['state'] = $_GPC['state'];
+                        }
+                    }
+                    pdo_update('jiaju_user',array('state'=>$arr['state']),array('openId'=>$_GPC['openid']));
+                    $edit_result = pdo_update('jiaju_shifu', $arr, array('uniacid' => $_W['uniacid'], 'sfid' => $id));
+                    if (!empty($edit_result)) {
+                        message('操作成功', $this->createWebUrl('Shifulist'), 'success');
+                    } else {
+                        message('操作失败', referer(), 'error');
+                    }
+                } else {
+                    include $this->template('shifudetail');
+                }
+
+            }
+
+        }
+    }
+    //禁用师傅
+    public function doWebStop(){
+        global $_W,$_GPC;
+        $table="jiaju_shifu";
+        $s=intval($_GPC['s']);
+        $id=intval($_GPC['id']);
+        $openid=$_GPC['openid'];
+        pdo_update('jiaju_user',array('state'=>$s),array('openId'=>$openid));
+        $result=pdo_update($table,array('state'=>$s),array('uniacid'=>$_W['uniacid'],'sfid'=>$id));
+        if($result){
+            message('操作成功',referer(),'success');
+        }else{
+            message('操作失败',referer(),'error');
+        }
+
+    }
     /*经营范围列表*/
     public function doWebRange()
     {
@@ -974,6 +1052,11 @@ class jiajuModuleSite extends WeModuleSite
         $frames['jz']['items']['service']['title'] = '添加服务';
         $frames['jz']['items']['service']['actions'] = array();
         $frames['jz']['items']['service']['active'] = '';
+
+        $frames['jz']['items']['shifu']['url'] = url('site/entry/shifulist', array('m' => $name));
+        $frames['jz']['items']['shifu']['title'] = '师傅列表';
+        $frames['jz']['items']['shifu']['actions'] = array();
+        $frames['jz']['items']['shifu']['active'] = '';
         ////////////////////////////////////////////////////////////
         $frames['seller']['title'] = '商家管理';
         $frames['seller']['active'] = '';
@@ -988,6 +1071,8 @@ class jiajuModuleSite extends WeModuleSite
         $frames['seller']['items']['addseller']['title'] = '添加商家';
         $frames['seller']['items']['addseller']['actions'] = array();
         $frames['seller']['items']['addseller']['active'] = '';
+
+
         ////////////////////////
         $frames['order']['title'] = '订单管理';
         $frames['order']['active'] = '';

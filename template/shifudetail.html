@@ -1,0 +1,177 @@
+{template 'common/header-zunyang'}
+<style type="text/css">
+    input[type="radio"] + label::before {
+        content: "\a0"; /*不换行空格*/
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 16px;
+        width: 1em;
+        height: 1em;
+        margin-right: .4em;
+        border-radius: 50%;
+        border: 2px solid #ddd;
+        text-indent: .15em;
+        line-height: 1;
+    }
+    input[type="radio"]:checked + label::before {
+        background-color: #44ABF7;
+        background-clip: content-box;
+        padding: .1em;
+        border: 2px solid #44ABF7;
+    }
+    input[type="radio"] {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+</style>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">信息详细 &nbsp;&nbsp;<a href="javascript :;" onClick="javascript :history.back(-1);"><span class="label label-success">返回</span></a></h3>
+    </div>
+    <div class="panel-body">
+        <form action="" method="post" class="form-horizontal" role="form" id="form1" >
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">姓名</div>
+                        <input type="text" class="form-control" name=""  value="{$result['name']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">手机号</div>
+                        <input type="text" class="form-control" name="" value="{$result['tel']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">身份证号</div>
+                        <input type="text" class="form-control" name="" value="{$result['IDnum']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">出生日期</div>
+                        <input type="text" class="form-control" name="" value="{$result['brdata']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">技能专长</div>
+                        <input type="text" class="form-control" name="" value="{$result['goodat']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">等级</div>
+                        <input type="text" class="form-control" name="grade" value="{$result['grade']}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">所属分类</div>
+                        <select name="pid" class="form-control" id="pid">
+                            {if empty($typelist)}
+                            <option value="" selected="selected">暂无分类</option>
+                            {else}
+                            {loop $typelist $v}
+                            <option value="{$v['sid']}" {if $result['type']==$v['sid']} selected="selected"{/if}>{$v['name']}</option>
+                            {/loop}
+                            {/if}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">身份证正反面</div>
+                        <a target="_blank" href="{$result['idimg1']}"><img src="{$result['idimg1']}" width="30%" height="500px;"/></a>
+                        <a target="_blank" href="{$result['idimg2']}"><img src="{$result['idimg2']}" width="30%" height="500px;"/></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lastname" class="col-sm-2 control-label">审核状态</label>
+                <div class="col-sm-10">
+                    <label class="radio-inline">
+                        <input type="radio" id="emailwy1" name="state" value="2" {if $result['state']==2 || $result['state']==4 || empty($result['state'])}checked{/if} />
+                        <label for="emailwy1">通过</label>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" id="emailwy2" name="state" value="3" {if $result['state']==3}checked{/if} />
+                        <label for="emailwy2">拒绝</label>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group control">
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">填写拒绝理由</div>
+                        <textarea type="text"  id='repcontent' class="form-control" name="resfu" autofocus>{$result['resfu']}</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label"></label>
+                <div class="col-sm-8 col-lg-9 col-xs-12">
+                    <input type="submit" class="btn btn-danger" value="提交">
+                    <input type="hidden" name="token" value="{$_W['token']}">
+                    <input type="hidden" name="openid" value="{$result['openid']}">
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<script>
+
+    $(function(){
+
+        $('#form1').submit(function(){
+            var options=$("input[type='radio']:checked").val();
+            if (options==2){
+                if ($.trim($("#repcontent").val())=="") {
+                    util.message('请填理由', '', 'error');
+                    return false;
+                }
+            }
+
+            return true;
+        });
+        select();
+        function select(){
+            var options=$("input[type='radio']:checked").val(); //获取选中的项
+
+            if(options==2){
+                $(".control").hide()
+            }else if(options==3){
+                $(".control").show()
+            }else{
+                $(".control").hide()
+            }
+        }
+        $('input[type=radio][name=state]').change(function() {
+            select();
+        });
+        $('body').on("click",'.remove',function(e){
+            $(this).parent('div').parent('div').remove();
+        })
+
+    })
+
+</script>
+{template 'common/footer'}

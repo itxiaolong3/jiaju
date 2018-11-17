@@ -583,11 +583,19 @@ class jiajuModuleWxapp extends WeModuleWxapp
     public function doPageUserOrder(){
         global $_W, $_GPC;
         $page=max(1, intval($_GPC['page']));
-        $pagesize=8;
+        $pagesize=4;
         $openid=$_GPC['openid'];
         $type=$_GPC['active'];//0全部 1待受理 2服务中 3待评价 4已完成
         if(empty($type)){
-            $result=pdo_getall('jiaju_order',array('uniacid'=>$_W['uniacid'],'openid'=>$openid), array() , '' , 'addtime DESC');
+            //$result=pdo_getall('jiaju_order',array('uniacid'=>$_W['uniacid'],'openid'=>$openid), array() , '' , 'addtime DESC');
+            //$result=pdo_getslice('jiaju_order', array('uniacid'=>$_W['uniacid'],'openid'=>$openid), array(($page - 2) * $pagesize,$pagesize) , $totals=0 , array() , '' ,array());
+            $sql="select * from " . tablename("jiaju_order") . " where `uniacid`=:uniacid and `openid`=:openid";
+            $params = array(
+                ':uniacid' => $_W['uniacid'],
+                ':openid' => $openid
+            );
+            $select_sql =$sql." LIMIT " .($page - 1) * $pagesize.",".$pagesize;
+            $result = pdo_fetchall($select_sql, $params);
         }else{
             $sql="select * from " . tablename("jiaju_order") . " where `uniacid`=:uniacid and `openid`=:openid and `state`=:state order by addtime desc";
             $params = array(
@@ -602,6 +610,7 @@ class jiajuModuleWxapp extends WeModuleWxapp
             $result[$k]['imgs']=explode(',',$v['imgs']);
         }
         $resdata['Data']=$result;
+        $resdata['sql']=$select_sql;
         echo json_encode($resdata);
 
     }
@@ -640,17 +649,41 @@ class jiajuModuleWxapp extends WeModuleWxapp
         $data['goodat']=$_GPC['goodat'];
         $data['uniacid']=$_W['uniacid'];
         $data['addtime']=date('Y-m-d H:i:s',time());
-        $addre=pdo_insert("jiaju_shifu",$data);
-        $newid=pdo_insertid();
-        if ($addre){
-            pdo_update('jiaju_user',array('state'=>1),array('openId'=>$openid));
-            $resdata['status']=1;
-            $resdata['msg']='提交成功';
+        $issave=pdo_get('jiaju_shifu',array('openid'=>$openid));
+        if ($issave){
+            //更新
+            $data['state']=1;
+            $addre=pdo_update("jiaju_shifu",$data,array('sfid'=>$_GPC['sfid']));
+            if ($addre){
+                pdo_update('jiaju_user',array('state'=>1),array('openId'=>$openid));
+                $resdata['status']=1;
+                $resdata['msg']='更新成功';
+            }else{
+                $resdata['status']=0;
+                $resdata['msg']='更新失败';
+            }
         }else{
-            $resdata['status']=0;
-            $resdata['msg']='提交失败';
+            //添加
+            $addre=pdo_insert("jiaju_shifu",$data);
+            $newid=pdo_insertid();
+            if ($addre){
+                pdo_update('jiaju_user',array('state'=>1),array('openId'=>$openid));
+                $resdata['status']=1;
+                $resdata['msg']='提交成功';
+            }else{
+                $resdata['status']=0;
+                $resdata['msg']='提交失败';
+            }
         }
+
         echo json_encode($resdata);
+    }
+    //获取个人资质
+    public function doPageGetsfinfo(){
+        global $_W, $_GPC;
+        $detailinfo=pdo_get('jiaju_shifu',array('openid'=>$_GPC['openid']));
+        $data['Data']=$detailinfo;
+        echo json_encode($data);
     }
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //我的接口结束
