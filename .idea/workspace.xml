@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="site.php" pinned="true" current-in-tab="true">
+      <file leaf-file-name="site.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="182">
-              <caret line="731" column="480" lean-forward="false" selection-start-line="731" selection-start-column="48" selection-end-line="731" selection-end-column="48" />
+              <caret line="731" column="48" lean-forward="false" selection-start-line="731" selection-start-column="48" selection-end-line="731" selection-end-column="48" />
               <folding>
                 <element signature="e#6#83#0#PHP" expanded="false" />
                 <element signature="n#doWebSite#0;n#jiajuModuleSite#0;n#!!top" expanded="false" />

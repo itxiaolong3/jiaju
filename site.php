@@ -11,7 +11,7 @@ class jiajuModuleSite extends WeModuleSite
 {
 
 
-    //入口，配置信息a
+    //入口，配置信息
     public function doWebSite()
     {
         global $_W, $_GPC;
