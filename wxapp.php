@@ -131,7 +131,7 @@ class jiajuModuleWxapp extends WeModuleWxapp
     }
     //////////////////////////////////////////////////
     //我的接口开始
-//获取轮播图
+    //获取轮播图
     public function doPageGetad()
     {
         global $_W, $_GPC;
@@ -583,12 +583,12 @@ class jiajuModuleWxapp extends WeModuleWxapp
     public function doPageUserOrder(){
         global $_W, $_GPC;
         $page=max(1, intval($_GPC['page']));
-        $pagesize=4;
+        $pagesize=5;
         $openid=$_GPC['openid'];
         $type=$_GPC['active'];//0全部 1待受理 2服务中 3待评价 4已完成
         if(empty($type)){
             //$result=pdo_getall('jiaju_order',array('uniacid'=>$_W['uniacid'],'openid'=>$openid), array() , '' , 'addtime DESC');
-            //$result=pdo_getslice('jiaju_order', array('uniacid'=>$_W['uniacid'],'openid'=>$openid), array(($page - 2) * $pagesize,$pagesize) , $totals=0 , array() , '' ,array());
+            //$result=pdo_getslice('jiaju_order', array('uniacid'=>$_W['uniacid'],'openid'=>$openid), array(($page - 1) * $pagesize,$pagesize) , $totals=0 , array() , '' ,array());
             $sql="select * from " . tablename("jiaju_order") . " where `uniacid`=:uniacid and `openid`=:openid";
             $params = array(
                 ':uniacid' => $_W['uniacid'],
@@ -642,8 +642,8 @@ class jiajuModuleWxapp extends WeModuleWxapp
         $data['tel']=$_GPC['tel'];
         $data['headerimg']=$headerimg['headerimg'];
         $data['IDnum']=$_GPC['IDnum'];
-        $data['name']=$_GPC['name'];
         $data['brdata']=$_GPC['brdata'];
+        $data['name']=$_GPC['name'];
         $data['idimg1']=$_GPC['idimg1'];
         $data['idimg2']=$_GPC['idimg2'];
         $data['goodat']=$_GPC['goodat'];
@@ -684,6 +684,79 @@ class jiajuModuleWxapp extends WeModuleWxapp
         $detailinfo=pdo_get('jiaju_shifu',array('openid'=>$_GPC['openid']));
         $data['Data']=$detailinfo;
         echo json_encode($data);
+    }
+    //获取商家列表
+    public function doPageGetsellList(){
+        global $_W, $_GPC;
+        $list=pdo_getall('jiaju_stores',array('uniacid'=>$_W['uniacid']));
+        foreach ($list as $k=>$v){
+            $list[$k]['otherimg']=explode(',',$v['otherimg']);
+            $list[$k]['s_img']=tomedia($v['s_img']);
+            $list[$k]['mengimg']=tomedia($v['mengimg']);
+            foreach ($list[$k]['otherimg'] as $kk=>$vv){
+                $list[$k]['otherimg'][$kk]=tomedia($vv);
+            }
+        }
+        $redata['Data']=$list;
+        echo json_encode($redata);
+    }
+    //商家详细
+    public function doPageGetonesell(){
+        global $_W, $_GPC;
+        $id=$_GPC['id'];
+        $result=pdo_get('jiaju_stores',array('uniacid'=>$_W['uniacid'],'id'=>$id));
+
+        $result['s_img']=tomedia($result['s_img']);
+        $result['mengimg']=tomedia($result['mengimg']);
+        $result['otherimg']=explode(',',$result['otherimg']);
+        foreach ($result['otherimg'] as $k=>$v){
+            $result['otherimg'][$k]=tomedia($v);
+        }
+        $re['Data']=$result;
+        echo json_encode($re);
+    }
+    //获取同城中的分类
+    public function doPageGetTCtype()
+    {
+        global $_W, $_GPC;
+        $table = "jiaju_type";
+        $data = array();
+        $sql = "select * from " . tablename($table) . " where `uniacid`=:uniacid and tid>0 order by orders desc";
+        $params = array(
+            ':uniacid' => $_W['uniacid'],
+        );
+        $result = pdo_fetchall($sql, $params);
+        if (empty($result)) {
+            $data['status'] = 0;
+            $data['msg'] = "没有数据";
+        } else {
+            foreach ($result as $k=>$v){
+                $result[$k]['id']=$k+1;
+                $result[$k]['title']=$v['name'];
+                $result[$k]['checked']=!1;
+                $result[$k]['maindoc_id']=$v['tid'];
+            }
+            $data['status'] = 1;
+            $data['msg'] = "返回数据成功";
+            $data['result'] = $result;
+        }
+        echo json_encode($data);
+    }
+    //获取指定分类中的分类列表
+    public function doPageGetonetype(){
+        global $_W, $_GPC;
+        $tid=$_GPC['mainDocId'];
+        if (empty($tid)){
+            $list=pdo_getall('jiaju_sertype',array('uniacid'=>$_W['uniacid']),array(),'','sid ASC');
+        }else{
+            $list=pdo_getall('jiaju_sertype',array('uniacid'=>$_W['uniacid'],'pid'=>$tid),array(),'','sid ASC');
+        }
+        foreach ($list as $kk=>$vv) {
+            $list[$kk]['img'] = tomedia($vv['img']);
+        }
+        $re['Data']=$list;
+        echo json_encode($re);
+
     }
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //我的接口结束
@@ -901,6 +974,22 @@ class jiajuModuleWxapp extends WeModuleWxapp
         $data['grade'] = $_GPC['grade'];
         $data['c_code'] = $_GPC['c_code'];
         $data['endtime'] = $_GPC['endtime'];
+
+//        //把转义符恢复htmlspecialchars_decode
+//        $s_img = htmlspecialchars_decode($_GPC['s_img']);
+//        //把引号替换
+//        $s_img = str_replace('"', '', $s_img);
+//        //剔除[ ]
+//        $s_img = ltrim($s_img, '[');
+//        $s_img = substr($s_img, 0, -1);
+//
+//        //$data['img'] =$deal;//这里也有可能是数组
+//        $data['s_img'] = $s_img;
+
+        //$data['s_img'] = $_GPC['s_img'];
+//        $data['s_img'] = ltrim($_GPC['s_img'], 'https://pj.dede1.com/attachment/');
+//        $data['yingyeimg'] = ltrim($_GPC['yingyeimg'], 'https://pj.dede1.com/attachment/');
+//        $data['travelallowimg'] = ltrim($_GPC['travelallowimg'], 'https://pj.dede1.com/attachment/');
         $data['s_img']=substr($_GPC['s_img'],32);
         $data['yingyeimg']=substr($_GPC['yingyeimg'],32);
         $data['travelallowimg']=substr($_GPC['travelallowimg'],32);

@@ -726,8 +726,22 @@ class jiajuModuleSite extends WeModuleSite
         $pindex = max(1, intval($_GPC['page']));
         $psize = 10;
         $getkeyword=$_GPC['keywords'];
-        $where=" ordernum LIKE '%".$getkeyword."%'";
-        $sql = "select * from " . tablename($table) ." where uniacid=:uniacid and ".$where." order by addtime desc limit " . ($pindex - 1) * $psize . ',' . $psize;
+        $type=isset($_GPC['type'])?$_GPC['type']:'all';
+        $where='';
+        if(isset($getkeyword)){
+            $where=" and  ordernum LIKE '%".$getkeyword."%'";
+            $type='all';
+        }
+        if($type=='wait'){//待派单
+            $where.=" and state=1";
+        }else if($type=='fins'){//已派单
+            $where.=" and state=2";
+        }else if($type=='complete'){//已完成
+            $where.=" and state=3";
+        }else if($type=='cancel'){//取消
+            $where.=" and state=4";
+        }
+        $sql = "select * from " . tablename($table) ." where uniacid=:uniacid ".$where." order by addtime desc limit " . ($pindex - 1) * $psize . ',' . $psize;
         $params = array(
             ':uniacid' => $_W['uniacid'],
         );
@@ -735,6 +749,7 @@ class jiajuModuleSite extends WeModuleSite
         $sql2 = "select count(*) from " . tablename($table) . " where `uniacid`=:uniacid";
         $total = pdo_fetchcolumn($sql2, $params);
         $pager = pagination($total, $pindex, $psize);
+        $type=$_GPC['type'];
         include $this->template("allorderlist");
     }
     //订单详细
@@ -1078,30 +1093,30 @@ class jiajuModuleSite extends WeModuleSite
         $frames['order']['active'] = '';
         $frames['order']['items'] = array();
 
-        $frames['order']['items']['allorder']['url'] = url('site/entry/allorder', array('m' => $name));
+        $frames['order']['items']['allorder']['url'] = url('site/entry/allorder', array('m' => $name,'type'=>'all'));
         $frames['order']['items']['allorder']['title'] = '全部订单';
         $frames['order']['items']['allorder']['actions'] = array();
         $frames['order']['items']['allorder']['active'] = '';
 
-        $frames['order']['items']['wait']['url'] = url('site/entry/wait', array('m' => $name));
-        $frames['order']['items']['wait']['title'] = '待派单';
-        $frames['order']['items']['wait']['actions'] = array();
-        $frames['order']['items']['wait']['active'] = '';
-
-        $frames['order']['items']['sering']['url'] = url('site/entry/sering', array('m' => $name));
-        $frames['order']['items']['sering']['title'] = '已派单';
-        $frames['order']['items']['sering']['actions'] = array();
-        $frames['order']['items']['sering']['active'] = '';
-
-        $frames['order']['items']['final']['url'] = url('site/entry/final', array('m' => $name));
-        $frames['order']['items']['final']['title'] = '已完成';
-        $frames['order']['items']['final']['actions'] = array();
-        $frames['order']['items']['final']['active'] = '';
-
-        $frames['order']['items']['cancel']['url'] = url('site/entry/cancel', array('m' => $name));
-        $frames['order']['items']['cancel']['title'] = '取消订单';
-        $frames['order']['items']['cancel']['actions'] = array();
-        $frames['order']['items']['cancel']['active'] = '';
+        //        $frames['order']['items']['wait']['url'] = url('site/entry/wait', array('m' => $name));
+//        $frames['order']['items']['wait']['title'] = '待派单';
+//        $frames['order']['items']['wait']['actions'] = array();
+//        $frames['order']['items']['wait']['active'] = '';
+//
+//        $frames['order']['items']['sering']['url'] = url('site/entry/sering', array('m' => $name));
+//        $frames['order']['items']['sering']['title'] = '已派单';
+//        $frames['order']['items']['sering']['actions'] = array();
+//        $frames['order']['items']['sering']['active'] = '';
+//
+//        $frames['order']['items']['final']['url'] = url('site/entry/final', array('m' => $name));
+//        $frames['order']['items']['final']['title'] = '已完成';
+//        $frames['order']['items']['final']['actions'] = array();
+//        $frames['order']['items']['final']['active'] = '';
+//
+//        $frames['order']['items']['cancel']['url'] = url('site/entry/cancel', array('m' => $name));
+//        $frames['order']['items']['cancel']['title'] = '取消订单';
+//        $frames['order']['items']['cancel']['actions'] = array();
+//        $frames['order']['items']['cancel']['active'] = '';
         ////////////////////////
 //        $frames['fenlei']['title'] = '经营范围管理';
 //        $frames['fenlei']['active'] = '';

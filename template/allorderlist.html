@@ -1,10 +1,11 @@
 {template 'common/header-zunyang'}
+<link rel="stylesheet" type="text/css" href="../addons/jiaju/template/public/ygcsslist.css">
 <div class="panel panel-default">
     <div class="panel-heading">
         全部订单列表
     </div>
-    <div style="width: 500px;height: 70px;border: 1px solid red;display: inline">
-        <form action="" method="get"  style="padding-left: 0">
+    <div style="width: 700px;height: 50px;display:flex;padding:20px 0 0 20px;">
+        <form action="" method="get"  style="padding-left: 0;margin-right:50px;">
             <input type="hidden" name="c" value="site" />
             <input type="hidden" name="a" value="entry" />
             <input type="hidden" name="m" value="jiaju" />
@@ -17,18 +18,25 @@
             </div>
             <input type="hidden" name="token" value="{$_W['token']}"/>
         </form>
-        <div style="display: inline">
-            <span>选择订单类型</span>
-        <select  id="test" name="item" autocomplete="off">
-            <option value="0" selected >全部类型</option>
-            <option value="1">待派单</option>
-            <option value="2">已派单</option>
-            <option value="3">已完成</option>
-            <option value="4">已取消</option>
-        </select>
+        <!--<select  id="test" name="item" autocomplete="off">-->
+        <!--<option value="0" selected >全部类型</option>-->
+        <!--<option value="1">待派单</option>-->
+        <!--<option value="2">已派单</option>-->
+        <!--<option value="3">已完成</option>-->
+        <!--<option value="4">已取消</option>-->
+        <!--</select>-->
+        <div style="margin-top:-25px;padding-bottom:10px;">
+            <ul class="nav1 nav-tabs1" style="display: flex;">
+                <li {if $type=='all'} class="active" {/if}><a href="{php echo $this->createWebUrl('allorder',array('type'=>all));}">全部订单</a></li>
+                <li {if $type=='wait'} class="active" {/if}><a href="{php echo $this->createWebUrl('allorder',array('type'=>wait));}">待派单</a></li>
+                <li {if $type=='fins'} class="active" {/if}><a href="{php echo $this->createWebUrl('allorder',array('type'=>fins));}">已派单</a></li>
+                <li {if $type=='complete'} class="active" {/if}><a href="{php echo $this->createWebUrl('allorder',array('type'=>complete));}">已完成</a></li>
+                <li {if $type=='cancel'} class="active" {/if}><a href="{php echo $this->createWebUrl('allorder',array('type'=>cancel));}">已取消</a></li>
+            </ul>
         </div>
 
     </div>
+
 
     <div class="table-responsive">
         <table class="table">
