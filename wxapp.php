@@ -746,10 +746,23 @@ class jiajuModuleWxapp extends WeModuleWxapp
     public function doPageGetonetype(){
         global $_W, $_GPC;
         $tid=$_GPC['mainDocId'];
+        $page=$_GPC['_p'];
+        $pagesize=6;
         if (empty($tid)){
-            $list=pdo_getall('jiaju_sertype',array('uniacid'=>$_W['uniacid']),array(),'','sid ASC');
+            $sql="select * from " . tablename("jiaju_sertype") . " where `uniacid`=:uniacid order by sid ASC";
+            $params = array(
+                ':uniacid' => $_W['uniacid'],
+            );
+            $select_sql =$sql." LIMIT " .($page - 1) * $pagesize.",".$pagesize;
+            $list = pdo_fetchall($select_sql, $params);
         }else{
-            $list=pdo_getall('jiaju_sertype',array('uniacid'=>$_W['uniacid'],'pid'=>$tid),array(),'','sid ASC');
+            $sql="select * from " . tablename("jiaju_sertype") . " where `uniacid`=:uniacid and `pid`=:pid order by sid ASC";
+            $params = array(
+                ':uniacid' => $_W['uniacid'],
+                ':pid'=>$tid
+            );
+            $select_sql =$sql." LIMIT " .($page - 1) * $pagesize.",".$pagesize;
+            $list = pdo_fetchall($select_sql, $params);
         }
         foreach ($list as $kk=>$vv) {
             $list[$kk]['img'] = tomedia($vv['img']);
