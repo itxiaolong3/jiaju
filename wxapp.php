@@ -771,6 +771,22 @@ class jiajuModuleWxapp extends WeModuleWxapp
         echo json_encode($re);
 
     }
+    //搜索服务
+    public function doPagegetSearchResult(){
+        global $_W, $_GPC;
+        $keyword=$_GPC['keyword'];
+        //指定商店模糊查询
+        $sql = "select * from " . tablename('sertype') . " where `uniacid`=:uniacid AND name LIKE '%{$keyword}%'";
+        $params = array(
+            ':uniacid' => $_W['uniacid']
+        );
+        $result = pdo_fetchall($sql, $params);
+        foreach ($result as $k=>$v){
+            $result[$k]['img']=tomedia($v['img']);
+        }
+        $result['sql']=$sql;
+        echo json_encode($result);
+    }
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //我的接口结束
     //获取问题
